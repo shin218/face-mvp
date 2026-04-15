@@ -6,3 +6,4 @@ out/
 .env
 node_modules/
 application.yml
+python/*.pth
