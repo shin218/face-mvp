@@ -5,3 +5,4 @@ out/
 *.iml
 .env
 node_modules/
+application.yml
