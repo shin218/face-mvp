@@ -1,0 +1,41 @@
+server:
+  port: 9090
+
+spring:
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+logging:
+  level:
+    com.example.demo.service.FacePlusService: DEBUG
+    com.example.demo.service.MultiModelVibeService: DEBUG
+
+face:
+  api:
+    key: "AyryzVi68I99gS9zFaDdb4-FR0jTWMc5"
+    secret: "N6sr5u8Otp3rg97-0a8iuOmoMhxvDtJm"
+
+# LLM 키는 환경변수 또는 프로젝트 루트 .env (DemoApplication에서 로드) 권장
+claude:
+  api:
+    key: ${ANTHROPIC_API_KEY:}
+    model: claude-sonnet-4-6
+
+openai:
+  api:
+    key: ${OPENAI_API_KEY:}
+    model: gpt-4o
+
+gemini:
+  api:
+    key: ${GEMINI_API_KEY:}
+    model: gemini-2.5-pro
+    fallbackModel: gemini-2.5-flash
+
+fal:
+  api:
+    key: ${FAL_API_KEY:}

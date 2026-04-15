@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Face++ Detect 테스트</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
+    .card { max-width: 960px; margin: 0 auto; padding: 16px; border: 1px solid #e5e7eb; border-radius: 12px; }
+    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; padding: 10px 12px; border-radius: 10px; margin-top: 12px; }
+    .ok { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; padding: 10px 12px; border-radius: 10px; margin-top: 12px; }
+    pre { white-space: pre-wrap; word-break: break-word; background: #0b1220; color: #e5e7eb; padding: 12px; border-radius: 12px; overflow: auto; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .kv { margin-top: 12px; padding: 12px; border: 1px solid #e5e7eb; border-radius: 12px; }
+    .kv b { display: inline-block; min-width: 140px; }
+    input[type="file"] { padding: 8px; border: 1px solid #e5e7eb; border-radius: 10px; }
+    button { padding: 10px 14px; border: 0; border-radius: 10px; background: #111827; color: white; cursor: pointer; }
+    button:hover { background: #0b1220; }
+    small { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Face++ Detect 테스트</h2>
+    <form method="post" th:action="@{/upload}" enctype="multipart/form-data">
+      <div class="row">
+        <input type="file" name="photo" accept="image/jpeg,image/png,.jpg,.jpeg,.png" required />
+        <button type="submit">업로드 &amp; Detect</button>
+      </div>
+      <div style="margin-top:8px;">
+        <small>허용 확장자: jpg/jpeg/png, 최대 10MB</small>
+      </div>
+    </form>
+
+    <div class="error" th:if="${error}">
+      <b th:text="${error}"></b>
+    </div>
+
+    <div class="kv" th:if="${assessment}">
+      <div><b>판정 결과</b> <code th:text="${assessment.verdict}"></code></div>
+      <div><b>사유 메시지</b> <span th:text="${assessment.reason}"></span></div>
+    </div>
+
+    <div class="ok" th:if="${assessment}">
+      <div class="kv">
+        <div><b>faces 개수</b> <span th:text="${assessment.facesCount}"></span></div>
+        <div><b>첫 번째 face_token</b> <code th:text="${assessment.firstFaceToken}"></code></div>
+      </div>
+      <div class="kv">
+        <div><b>headpose</b>
+          <span th:if="${assessment.headpose == null}"></span>
+          <code th:if="${assessment.headpose != null}">
+            yaw=<span th:text="${assessment.headpose.yawAngle}"></span>,
+            pitch=<span th:text="${assessment.headpose.pitchAngle}"></span>,
+            roll=<span th:text="${assessment.headpose.rollAngle}"></span>
+          </code>
+        </div>
+        <div><b>blur</b>
+          <span th:if="${assessment.blur == null}"></span>
+          <code th:if="${assessment.blur != null}">
+            blurness(value=<span th:text="${assessment.blur.blurnessValue}"></span>, threshold=<span th:text="${assessment.blur.blurnessThreshold}"></span>),
+            motionblur(value=<span th:text="${assessment.blur.motionblurValue}"></span>, threshold=<span th:text="${assessment.blur.motionblurThreshold}"></span>),
+            gaussianblur(value=<span th:text="${assessment.blur.gaussianblurValue}"></span>, threshold=<span th:text="${assessment.blur.gaussianblurThreshold}"></span>)
+          </code>
+        </div>
+        <div><b>eyestatus</b>
+          <span th:if="${assessment.eyestatus == null}"></span>
+          <code th:if="${assessment.eyestatus != null}">
+            left_eye_open=<span th:text="${assessment.eyestatus.leftEyeOpen}"></span>,
+            right_eye_open=<span th:text="${assessment.eyestatus.rightEyeOpen}"></span>
+          </code>
+        </div>
+
+        <div><b>gender</b>
+          <span th:if="${assessment.gender == null}"></span>
+          <code th:if="${assessment.gender != null}">
+            value=<span th:text="${assessment.gender.value}"></span>,
+            confidence=<span th:text="${assessment.gender.confidence}"></span>
+          </code>
+        </div>
+
+        <div><b>age</b>
+          <span th:if="${assessment.age == null}"></span>
+          <code th:if="${assessment.age != null}">
+            value=<span th:text="${assessment.age.value}"></span>
+          </code>
+        </div>
+
+        <div><b>emotion</b>
+          <span th:if="${#strings.isEmpty(assessment.emotion)}"></span>
+          <code th:if="${!#strings.isEmpty(assessment.emotion)}" th:text="${assessment.emotion}"></code>
+        </div>
+
+        <div><b>beauty</b>
+          <span th:if="${assessment.beauty == null}"></span>
+          <code th:if="${assessment.beauty != null}">
+            male_score=<span th:text="${assessment.beauty.maleScore}"></span>,
+            female_score=<span th:text="${assessment.beauty.femaleScore}"></span>
+          </code>
+        </div>
+
+        <div><b>skinstatus</b>
+          <span th:if="${assessment.skinstatus == null}"></span>
+          <code th:if="${assessment.skinstatus != null}">
+            health=<span th:text="${assessment.skinstatus.health}"></span>,
+            stain=<span th:text="${assessment.skinstatus.stain}"></span>,
+            acne=<span th:text="${assessment.skinstatus.acne}"></span>,
+            dark_circle=<span th:text="${assessment.skinstatus.darkCircle}"></span>
+          </code>
+        </div>
+
+        <div><b>facequality</b>
+          <span th:if="${assessment.facequality == null}"></span>
+          <code th:if="${assessment.facequality != null}">
+            value=<span th:text="${assessment.facequality.value}"></span>,
+            threshold=<span th:text="${assessment.facequality.threshold}"></span>
+          </code>
+        </div>
+
+        <div><b>structure</b>
+          <span th:if="${assessment.structure == null}"></span>
+          <code th:if="${assessment.structure != null}">
+            eye_distance_px=<span th:text="${assessment.structure.eyeDistance}"></span>,
+            face_w_h_ratio=<span th:text="${assessment.structure.faceWidthHeightRatio}"></span>,
+            eye_width_ratio=<span th:text="${assessment.structure.eyeWidthRatio}"></span>,
+            nose_chin_to_forehead_nose_ratio=<span th:text="${assessment.structure.noseChinToForeheadNoseRatio}"></span>
+          </code>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:16px;">응답 JSON (Pretty)</h3>
+    <pre th:text="${assessment != null ? assessment.prettyJson : ''}"></pre>
+
+    <h3 style="margin-top:16px;">Claude Vibe 분석 결과</h3>
+    <pre th:text="${claudeResult}"></pre>
+
+    <div th:if="${assessment != null and !#strings.isEmpty(assessment.rawJson)}">
+      <h3 style="margin-top:16px;">응답 JSON (Raw)</h3>
+      <pre th:text="${assessment.rawJson}"></pre>
+    </div>
+  </div>
+</body>
+</html>
+

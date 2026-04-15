@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Face++ · 멀티 LLM Vibe 비교</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
+    .card { max-width: 1200px; margin: 0 auto; padding: 16px; border: 1px solid #e5e7eb; border-radius: 12px; }
+    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; padding: 10px 12px; border-radius: 10px; margin-top: 12px; }
+    .ok { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; padding: 10px 12px; border-radius: 10px; margin-top: 12px; }
+    pre { white-space: pre-wrap; word-break: break-word; background: #0b1220; color: #e5e7eb; padding: 12px; border-radius: 12px; overflow: auto; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .kv { margin-top: 12px; padding: 12px; border: 1px solid #e5e7eb; border-radius: 12px; }
+    .kv b { display: inline-block; min-width: 140px; }
+    input[type="file"] { padding: 8px; border: 1px solid #e5e7eb; border-radius: 10px; }
+    button { padding: 10px 14px; border: 0; border-radius: 10px; background: #111827; color: white; cursor: pointer; }
+    button:hover { background: #0b1220; }
+    small { color: #6b7280; }
+
+    /* Before 단독 표시 */
+    .before-section {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .before-section .ba-label {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+    .before-section img {
+      max-width: 320px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      object-fit: cover;
+    }
+
+    /* Vibe 그리드 */
+    .vibe-compare { margin-top: 24px; }
+    .vibe-compare > h3 { margin-bottom: 12px; font-size: 1.1rem; }
+    .vibe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+    @media (max-width: 960px) {
+      .vibe-grid { grid-template-columns: 1fr; }
+    }
+    .vibe-col {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 12px;
+      background: #fafafa;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+    }
+    .vibe-col header { margin-bottom: 8px; }
+    .vibe-col h4 { margin: 0 0 4px 0; font-size: 0.95rem; }
+    pre.vibe-out { margin: 0; min-height: 4em; font-size: 0.82rem; line-height: 1.45; }
+    pre.vibe-err { margin: 0; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+    .vibe-english-result { margin-top: 4px; }
+    .vibe-english-result pre.vibe-out { background: #0b1220; color: #e5e7eb; }
+    .korean-result {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #7dd3fc;
+      background: #e0f2fe;
+    }
+    .korean-result pre.vibe-out-korean {
+      background: transparent;
+      color: #0c4a6e;
+      border: 0;
+      padding: 0;
+      min-height: 0;
+    }
+
+    /* After 이미지 (모델별) */
+    .after-section {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .after-section .after-label {
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: #6d28d9;
+    }
+    .after-section img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ddd6fe;
+      object-fit: cover;
+    }
+    .after-prompt {
+      font-size: 0.72rem;
+      color: #6b7280;
+      background: #f5f3ff;
+      border-radius: 6px;
+      padding: 6px 8px;
+      line-height: 1.5;
+    }
+    .after-error {
+      font-size: 0.78rem;
+      color: #991b1b;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 6px;
+      padding: 6px 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Face++ Detect · Claude / GPT-4o / Gemini 비교</h2>
+    <form method="post" th:action="@{/upload}" enctype="multipart/form-data">
+      <div class="row">
+        <input type="file" name="photo" accept="image/jpeg,image/png,.jpg,.jpeg,.png" required />
+        <button type="submit">업로드 &amp; Detect</button>
+      </div>
+      <div style="margin-top:8px;">
+        <small>허용 확장자: jpg/jpeg/png, 최대 10MB</small>
+      </div>
+    </form>
+
+    <div class="error" th:if="${error}">
+      <b th:text="${error}"></b>
+    </div>
+
+    <!-- Before 이미지 (상단 단독) -->
+    <div class="before-section" th:if="${beforeImageDataUri != null}">
+      <span class="ba-label">Before</span>
+      <img th:src="${beforeImageDataUri}" alt="Before" />
+    </div>
+
+    <div class="kv" th:if="${assessment}">
+      <div><b>판정 결과</b> <code th:text="${assessment.verdict}"></code></div>
+      <div><b>사유 메시지</b> <span th:text="${assessment.reason}"></span></div>
+    </div>
+
+    <div class="ok" th:if="${assessment}">
+      <div class="kv">
+        <div><b>faces 개수</b> <span th:text="${assessment.facesCount}"></span></div>
+        <div><b>첫 번째 face_token</b> <code th:text="${assessment.firstFaceToken}"></code></div>
+      </div>
+      <div class="kv">
+        <div><b>headpose</b>
+          <span th:if="${assessment.headpose == null}"></span>
+          <code th:if="${assessment.headpose != null}">
+            yaw=<span th:text="${assessment.headpose.yawAngle}"></span>,
+            pitch=<span th:text="${assessment.headpose.pitchAngle}"></span>,
+            roll=<span th:text="${assessment.headpose.rollAngle}"></span>
+          </code>
+        </div>
+        <div><b>blur</b>
+          <span th:if="${assessment.blur == null}"></span>
+          <code th:if="${assessment.blur != null}">
+            blurness(value=<span th:text="${assessment.blur.blurnessValue}"></span>, threshold=<span th:text="${assessment.blur.blurnessThreshold}"></span>),
+            motionblur(value=<span th:text="${assessment.blur.motionblurValue}"></span>, threshold=<span th:text="${assessment.blur.motionblurThreshold}"></span>),
+            gaussianblur(value=<span th:text="${assessment.blur.gaussianblurValue}"></span>, threshold=<span th:text="${assessment.blur.gaussianblurThreshold}"></span>)
+          </code>
+        </div>
+        <div><b>eyestatus</b>
+          <span th:if="${assessment.eyestatus == null}"></span>
+          <code th:if="${assessment.eyestatus != null}">
+            left_eye_open=<span th:text="${assessment.eyestatus.leftEyeOpen}"></span>,
+            right_eye_open=<span th:text="${assessment.eyestatus.rightEyeOpen}"></span>
+          </code>
+        </div>
+        <div><b>gender</b>
+          <span th:if="${assessment.gender == null}"></span>
+          <code th:if="${assessment.gender != null}">
+            value=<span th:text="${assessment.gender.value}"></span>,
+            confidence=<span th:text="${assessment.gender.confidence}"></span>
+          </code>
+        </div>
+        <div><b>age</b>
+          <span th:if="${assessment.age == null}"></span>
+          <code th:if="${assessment.age != null}">
+            value=<span th:text="${assessment.age.value}"></span>
+          </code>
+        </div>
+        <div><b>emotion</b>
+          <span th:if="${#strings.isEmpty(assessment.emotion)}"></span>
+          <code th:if="${!#strings.isEmpty(assessment.emotion)}" th:text="${assessment.emotion}"></code>
+        </div>
+        <div><b>beauty</b>
+          <span th:if="${assessment.beauty == null}"></span>
+          <code th:if="${assessment.beauty != null}">
+            male_score=<span th:text="${assessment.beauty.maleScore}"></span>,
+            female_score=<span th:text="${assessment.beauty.femaleScore}"></span>
+          </code>
+        </div>
+        <div><b>skinstatus</b>
+          <span th:if="${assessment.skinstatus == null}"></span>
+          <code th:if="${assessment.skinstatus != null}">
+            health=<span th:text="${assessment.skinstatus.health}"></span>,
+            stain=<span th:text="${assessment.skinstatus.stain}"></span>,
+            acne=<span th:text="${assessment.skinstatus.acne}"></span>,
+            dark_circle=<span th:text="${assessment.skinstatus.darkCircle}"></span>
+          </code>
+        </div>
+        <div><b>facequality</b>
+          <span th:if="${assessment.facequality == null}"></span>
+          <code th:if="${assessment.facequality != null}">
+            value=<span th:text="${assessment.facequality.value}"></span>,
+            threshold=<span th:text="${assessment.facequality.threshold}"></span>
+          </code>
+        </div>
+        <div><b>structure</b>
+          <span th:if="${assessment.structure == null}"></span>
+          <code th:if="${assessment.structure != null}">
+            eye_distance_px=<span th:text="${assessment.structure.eyeDistance}"></span>,
+            face_w_h_ratio=<span th:text="${assessment.structure.faceWidthHeightRatio}"></span>,
+            left_eye_width_px=<span th:text="${assessment.structure.leftEyeWidthPx}"></span>,
+            right_eye_width_px=<span th:text="${assessment.structure.rightEyeWidthPx}"></span>,
+            nose_chin_to_forehead_nose_ratio=<span th:text="${assessment.structure.noseChinToForeheadNoseRatio}"></span>,
+            lip_thickness_px=<span th:text="${assessment.structure.lipThicknessPx}"></span>,
+            face_shape=<span th:text="${assessment.structure.faceShape}"></span>,
+            bangs_likely=<span th:text="${assessment.structure.bangsLikely}"></span>
+          </code>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:16px;">응답 JSON (Pretty)</h3>
+    <pre th:text="${assessment != null ? assessment.prettyJson : ''}"></pre>
+
+    <section class="vibe-compare" th:if="${vibeResults != null and !vibeResults.isEmpty()}">
+      <h3>멀티 모델 Vibe 분석 + After 이미지</h3>
+      <div class="vibe-grid">
+        <article class="vibe-col" th:each="r : ${vibeResults}">
+          <header>
+            <h4 th:text="${r.provider}">모델</h4>
+          </header>
+
+          <!-- Vibe 결과 -->
+          <pre class="vibe-out vibe-err" th:if="${r.error != null}" th:text="${r.error}"></pre>
+          <th:block th:if="${r.error == null}">
+            <pre class="vibe-raw-source" style="display:none;" th:text="${r.text}"></pre>
+            <div class="vibe-english-result">
+              <pre class="vibe-out"></pre>
+            </div>
+            <div class="korean-result" style="display:none;">
+              <pre class="vibe-out vibe-out-korean"></pre>
+            </div>
+          </th:block>
+
+          <!-- After 이미지 (모델별) -->
+          <th:block th:with="afterResult=${afterResultMap != null ? afterResultMap[r.provider] : null}">
+            <div class="after-section" th:if="${afterResult != null}">
+              <span class="after-label">After (AI Generated)</span>
+              <img th:if="${afterResult.imageUrl != null}"
+                   th:src="${afterResult.imageUrl}"
+                   alt="After"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+              <div style="display:none;" class="after-error"
+                   th:if="${afterResult.imageUrl != null}">
+                이미지 로드 실패 — URL 직접 확인:
+                <a th:href="${afterResult.imageUrl}" th:text="${afterResult.imageUrl}" target="_blank"></a>
+              </div>
+              <div class="after-error" th:if="${afterResult.imageUrl == null and afterResult.error != null}"
+                   th:text="${afterResult.error}"></div>
+              <div class="after-prompt" th:if="${afterResult.prompt != null}">
+                <b>Prompt:</b> <span th:text="${afterResult.prompt}"></span>
+              </div>
+            </div>
+          </th:block>
+        </article>
+      </div>
+
+      <script>
+        (function () {
+          function stripKoreanMarkers(s) {
+            if (!s) return '';
+            return s
+              .replace(/\[KOREAN_START\]/g, '')
+              .replace(/\[KOREAN_END\]/g, '')
+              .trim();
+          }
+          function splitKorean(full) {
+            if (!full) return { en: '', ko: '' };
+            var re = /\[KOREAN_START\]([\s\S]*?)\[KOREAN_END\]/;
+            var m = full.match(re);
+            if (!m) {
+              return { en: stripKoreanMarkers(full.trim()), ko: '' };
+            }
+            return {
+              en: stripKoreanMarkers(full.slice(0, m.index).trim()),
+              ko: stripKoreanMarkers((m[1] || '').trim())
+            };
+          }
+          document.querySelectorAll('article.vibe-col').forEach(function (col) {
+            var raw = col.querySelector('pre.vibe-raw-source');
+            if (!raw) return;
+            var provider = (col.querySelector('h4') && col.querySelector('h4').textContent) || '';
+            var parts = splitKorean(raw.textContent);
+            var preEn = col.querySelector('.vibe-english-result pre.vibe-out');
+            var koWrap = col.querySelector('.korean-result');
+            var preKo = koWrap ? koWrap.querySelector('pre.vibe-out-korean') : null;
+            if (preEn) preEn.textContent = parts.en;
+            if (parts.ko && koWrap && preKo) {
+              preKo.textContent = parts.ko;
+              koWrap.style.display = 'block';
+            }
+          });
+        })();
+      </script>
+    </section>
+
+    <div th:if="${assessment != null and !#strings.isEmpty(assessment.rawJson)}">
+      <h3 style="margin-top:16px;">응답 JSON (Raw)</h3>
+      <pre th:text="${assessment.rawJson}"></pre>
+    </div>
+  </div>
+</body>
+</html>

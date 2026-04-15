@@ -1,0 +1,17 @@
+# Hair Segmentation: GroundingDINO + SAM
+# 설치:
+#   pip install -r requirements.txt
+#
+# segment-anything은 PyPI 또는 GitHub 설치:
+#   pip install segment-anything
+# 또는:
+#   pip install git+https://github.com/facebookresearch/segment-anything.git
+
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.44.0
+segment-anything>=1.0
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+requests>=2.28.0
