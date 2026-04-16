@@ -220,6 +220,29 @@ async function main() {
   }
 
   // ───────────────────────────────────────────────────────────────────────────
+  // STEP 1.5: 닮은 연예인 검색 (Face++ Search → celebrity DB)
+  // ───────────────────────────────────────────────────────────────────────────
+  console.log('\n[STEP 1.5] 닮은 연예인 검색');
+
+  let celebrityMatches = [];
+  try {
+    // ESM 모듈을 CJS에서 동적 import
+    const { findSimilarCelebrity } = await import('./find-similar-celebrity.js');
+    const { matches } = await findSimilarCelebrity(BEFORE_PATH);
+    celebrityMatches = matches;
+
+    if (matches.length > 0) {
+      for (const m of matches) {
+        console.log(`  → ${m.name} (${m.name_en})  confidence: ${m.confidence}%`);
+      }
+    } else {
+      console.log('  → 매칭 연예인 없음 (confidence 60% 미만) — 기본 분석으로 진행');
+    }
+  } catch (e) {
+    console.warn(`  ⚠ 연예인 검색 실패 (건너뜀): ${e.message}`);
+  }
+
+  // ───────────────────────────────────────────────────────────────────────────
   // STEP 2: LLM 분석 (GPT / Gemini / Claude 병렬)
   // ───────────────────────────────────────────────────────────────────────────
   console.log('\n[STEP 2] LLM 분석 (3개 모델 병렬)');
@@ -227,7 +250,7 @@ async function main() {
   const [gptRes, geminiRes, claudeRes] = await Promise.allSettled([
     analyzeWithGPT(beforeBytes, BEFORE_PATH),
     analyzeWithGemini(beforeBytes, BEFORE_PATH),
-    analyzeWithClaude(beforeBytes, BEFORE_PATH),
+    analyzeWithClaude(beforeBytes, BEFORE_PATH, celebrityMatches), // ← celebrity context 주입
   ]);
 
   const analyses = {};

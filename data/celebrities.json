@@ -28,14 +28,21 @@
         "tailored pieces"
       ],
       "vibe": "Soft, sophisticated femininity with a romantic and approachable girl-next-door charm."
-    }
+    },
+    "image_paths": [
+      "data/images/박보영/02.jpg",
+      "data/images/박보영/04.jpg"
+    ]
   },
   {
     "name": "아이유",
     "name_en": "IU (Lee Ji-eun)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "94462a6d8656a49d2fab68906a53ba4b",
+      "9586787cf3b03db42c452cd3a316c707"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -59,14 +66,21 @@
         "minimalist chic"
       ],
       "vibe": "Ethereal and romantic with a modern minimalist edge, balancing girl-next-door charm with sophisticated elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/아이유/02.jpg",
+      "data/images/아이유/05.jpg"
+    ]
   },
   {
     "name": "김고은",
     "name_en": "Kim Go-eun",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "0044c070f9dcd44ff8cca399bdba70c9",
+      "3dba83fd437de5403aed135c48cbad7b"
+    ],
     "style": {
       "makeup": [
         "soft brown eyeshadow",
@@ -90,14 +104,22 @@
         "luxury basics"
       ],
       "vibe": "Effortlessly sophisticated with a timeless, understated elegance that balances modern minimalism with romantic sensibility."
-    }
+    },
+    "image_paths": [
+      "data/images/김고은/02.jpg",
+      "data/images/김고은/03.jpg"
+    ]
   },
   {
     "name": "전소미",
     "name_en": "Jeon So-mi",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "a89ee1f529f4de07fd8fe890abd1492b",
+      "188fe8040888e7d353536076a0a500f9",
+      "b74f6e9604a4a40da1a69fc4d7cb5966"
+    ],
     "style": {
       "makeup": [
         "bold red lips",
@@ -121,14 +143,24 @@
         "statement accessories"
       ],
       "vibe": "Confident and edgy with a polished K-pop aesthetic that blends street style coolness with sophisticated glamour."
-    }
+    },
+    "image_paths": [
+      "data/images/전소미/01.jpg",
+      "data/images/전소미/04.jpg",
+      "data/images/전소미/05.png"
+    ]
   },
   {
     "name": "카리나",
     "name_en": "Karina (aespa)",
     "country": "KR",
     "face_shape": "Heart",
-    "face_tokens": [],
+    "face_tokens": [
+      "b5e092e3b59a38356eb2dcf744aabd6a",
+      "87195037e8ef62d7834e6bcd37b9d081",
+      "a0bcfef1d8e304f4a1802f2d1e08cdcd",
+      "47c3886ee26d08e22c33a554f833f66d"
+    ],
     "style": {
       "makeup": [
         "glossy lips",
@@ -152,14 +184,25 @@
         "statement accessories"
       ],
       "vibe": "Modern, refined elegance with a cool-girl aesthetic that balances minimalism and sophisticated luxury."
-    }
+    },
+    "image_paths": [
+      "data/images/카리나/01.png",
+      "data/images/카리나/02.jpg",
+      "data/images/카리나/03.jpg",
+      "data/images/카리나/04.webp",
+      "data/images/카리나/05.jpg"
+    ]
   },
   {
     "name": "윈터",
     "name_en": "Winter (aespa)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "5863b335d07ef127fed0b35f562ff496",
+      "c70ce31fae36bb7a71d3d0305fb262ef",
+      "e8698c68a1194470f9129c90388ed471"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -183,14 +226,23 @@
         "coordinated sets"
       ],
       "vibe": "Sophisticated yet playful K-pop aesthetic with a perfect balance of elegant minimalism and trendy futuristic edge."
-    }
+    },
+    "image_paths": [
+      "data/images/윈터/03.png",
+      "data/images/윈터/04.jpg",
+      "data/images/윈터/05.jpg"
+    ]
   },
   {
     "name": "사쿠라",
     "name_en": "Sakura (LE SSERAFIM)",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "d8e837b38246fe6c49c395a8e095854c",
+      "0e69cd268d03c7bb971209c2b2b8f20e",
+      "c2a3a92567ffb5d3d055ddfe494ae8a9"
+    ],
     "style": {
       "makeup": [
         "soft gradient lips",
@@ -214,14 +266,21 @@
         "elegant casual wear"
       ],
       "vibe": "effortlessly chic with a balance of girl-next-door freshness and sophisticated modern elegance"
-    }
+    },
+    "image_paths": [
+      "data/images/사쿠라/01.jpg",
+      "data/images/사쿠라/04.jpg",
+      "data/images/사쿠라/05.jpg"
+    ]
   },
   {
     "name": "채원",
     "name_en": "Chaewon (LE SSERAFIM)",
     "country": "KR",
     "face_shape": "Heart",
-    "face_tokens": [],
+    "face_tokens": [
+      "80b2690b26fa61e9d3caf760aaa5e945"
+    ],
     "style": {
       "makeup": [
         "soft glowing skin",
@@ -245,14 +304,21 @@
         "sophisticated casual"
       ],
       "vibe": "Effortlessly elegant with a refined, understated sophistication that balances girl-next-door charm with high-fashion sensibility."
-    }
+    },
+    "image_paths": [
+      "data/images/채원/04.jpg",
+      "data/images/채원/05.jpg"
+    ]
   },
   {
     "name": "손예진",
     "name_en": "Son Ye-jin",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "f62412619106875742c91e6b1d0e6125",
+      "0e5f00027999888e9353f3939460b67a"
+    ],
     "style": {
       "makeup": [
         "soft natural glow",
@@ -276,14 +342,22 @@
         "minimalist chic"
       ],
       "vibe": "Elegant and refined with a balance of sophisticated minimalism and soft romantic femininity"
-    }
+    },
+    "image_paths": [
+      "data/images/손예진/02.jpg",
+      "data/images/손예진/04.jpg"
+    ]
   },
   {
     "name": "전지현",
     "name_en": "Jun Ji-hyun",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "44861dcc048ba9881dddea38ddbb0281",
+      "24f5821ac4066b95ba661a902624009a",
+      "49ba966de5256fb644f145ad9e8d0d66"
+    ],
     "style": {
       "makeup": [
         "dewy-skin",
@@ -307,14 +381,24 @@
         "statement-accessories"
       ],
       "vibe": "Sophisticated, ethereal elegance with timeless femininity and refined luxury aesthetic."
-    }
+    },
+    "image_paths": [
+      "data/images/전지현/01.jpg",
+      "data/images/전지현/02.jpg",
+      "data/images/전지현/04.jpg",
+      "data/images/전지현/05.jpg"
+    ]
   },
   {
     "name": "김태리",
     "name_en": "Kim Tae-ri",
     "country": "KR",
     "face_shape": "Square",
-    "face_tokens": [],
+    "face_tokens": [
+      "11e1500be8fad67f2f2cacac88a91f6f",
+      "60daf6e4bef1fdd93e1df822fbb2f8da",
+      "60559e21a4cd75942f69090900bd24fe"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -338,14 +422,23 @@
         "classic elegance"
       ],
       "vibe": "Ethereal sophistication with a modern minimalist approach, blending understated glamour with timeless elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/김태리/02.jpg",
+      "data/images/김태리/04.jpg",
+      "data/images/김태리/05.jpeg"
+    ]
   },
   {
     "name": "한소희",
     "name_en": "Han So-hee",
     "country": "KR",
     "face_shape": "Heart",
-    "face_tokens": [],
+    "face_tokens": [
+      "7822b77cee06358f8a4a859ad0c71f0b",
+      "1a7136ecc64695752c8aa4d0e58bb8d0",
+      "33eebcfd6d9bbeedfed17c8f57fb83a9"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -369,14 +462,23 @@
         "monochromatic palettes"
       ],
       "vibe": "Effortlessly sophisticated with a blend of edgy minimalism and soft femininity, balancing polished elegance with understated cool."
-    }
+    },
+    "image_paths": [
+      "data/images/한소희/03.jpg",
+      "data/images/한소희/04.jpg",
+      "data/images/한소희/05.jpg"
+    ]
   },
   {
     "name": "수지",
     "name_en": "Suzy (Bae Suzy)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "da3e8df809f90b7423cd7022880c0737",
+      "332d6bdeb832f86e0dc5d12e19eb2ef2",
+      "d7385bac9bc5053f9d9a74df7ec1bc28"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -400,14 +502,22 @@
         "luxury minimalism"
       ],
       "vibe": "Effortlessly elegant with a sophisticated yet approachable femininity that balances timeless classics with contemporary trends."
-    }
+    },
+    "image_paths": [
+      "data/images/수지/01.jpg",
+      "data/images/수지/04.jpeg",
+      "data/images/수지/05.jpg"
+    ]
   },
   {
     "name": "제니",
     "name_en": "Jennie (BLACKPINK)",
     "country": "KR",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "c2fbaf72d8a17df1805c770a41a469d8",
+      "736789936efc0ffeb8032b19bf9b348c"
+    ],
     "style": {
       "makeup": [
         "smokey eyes",
@@ -431,14 +541,21 @@
         "minimalist chic"
       ],
       "vibe": "Effortlessly luxe and edgy with a sophisticated Y2K-inspired minimalism that balances casual cool with high-fashion elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/제니/04.jpg",
+      "data/images/제니/05.jpg"
+    ]
   },
   {
     "name": "지수",
     "name_en": "Jisoo (BLACKPINK)",
     "country": "KR",
     "face_shape": "Heart",
-    "face_tokens": [],
+    "face_tokens": [
+      "04773e87a7bcd0328dea1dd9f6aca3c9",
+      "2e1d176a56889df3b9f4b065b82c2d1e"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -462,14 +579,22 @@
         "classic sophistication"
       ],
       "vibe": "Timeless elegance with a modern luxury aesthetic, blending girl-next-door charm with high-fashion refinement."
-    }
+    },
+    "image_paths": [
+      "data/images/지수/02.jpg",
+      "data/images/지수/03.jpg"
+    ]
   },
   {
     "name": "아이린",
     "name_en": "Irene (Red Velvet)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "fabbc619183801874a0386636489872b",
+      "0ea1b3f53f56b20fd6cb40349a045547",
+      "49e72bd8749be836c39edbe16fd0745b"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -493,14 +618,23 @@
         "sophisticated basics"
       ],
       "vibe": "Elegant and sophisticated with a refined minimalist approach that exudes timeless luxury and understated confidence."
-    }
+    },
+    "image_paths": [
+      "data/images/아이린/02.jpg",
+      "data/images/아이린/04.jpg",
+      "data/images/아이린/05.jpg"
+    ]
   },
   {
     "name": "고준희",
     "name_en": "Ko Jun-hee",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "fd0b498095b007df43e3e6549f2ef8d1",
+      "c97c863b79b914375f308d2a2fc7f9fc",
+      "0a8c7dbf57e56d9c3d7a7d17ca517673"
+    ],
     "style": {
       "makeup": [
         "glossy lips",
@@ -524,14 +658,24 @@
         "sophisticated basics"
       ],
       "vibe": "Modern minimalist elegance with a focus on effortless sophistication and natural beauty."
-    }
+    },
+    "image_paths": [
+      "data/images/고준희/02.jpg",
+      "data/images/고준희/04.jpg",
+      "data/images/고준희/05.jpg"
+    ]
   },
   {
     "name": "이성경",
     "name_en": "Lee Sung-kyung",
     "country": "KR",
     "face_shape": "Oblong",
-    "face_tokens": [],
+    "face_tokens": [
+      "e205de82b0bd5e78e54e41775efd15ae",
+      "55e17044930f177e8635cc4a4f9d323f",
+      "309eaadef8c0470fccb1ee8fe8035fd9",
+      "628c03f4e5359a8b6ffb4c31f317cc4a"
+    ],
     "style": {
       "makeup": [
         "dewy skin",
@@ -555,14 +699,24 @@
         "sophisticated casual"
       ],
       "vibe": "Modern, effortlessly elegant with a focus on clean lines and natural beauty that balances polished professionalism with approachable femininity."
-    }
+    },
+    "image_paths": [
+      "data/images/이성경/01.jpg",
+      "data/images/이성경/03.jpg",
+      "data/images/이성경/04.jpg",
+      "data/images/이성경/05.jpg"
+    ]
   },
   {
     "name": "장원영",
     "name_en": "Jang Won-young (IVE)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "30142939938e52988f73399ef5f7c6f3",
+      "2ecd25f20907cb1c6a72a4ede8870f7e",
+      "da35026c310b293d3ea394737ad0441d"
+    ],
     "style": {
       "makeup": [
         "glowy skin",
@@ -586,14 +740,23 @@
         "luxury basics"
       ],
       "vibe": "Effortlessly elegant with a polished, girl-next-door sophistication that balances edgy minimalism with subtle glamour."
-    }
+    },
+    "image_paths": [
+      "data/images/장원영/03.jpg",
+      "data/images/장원영/04.jpg",
+      "data/images/장원영/05.jpg"
+    ]
   },
   {
     "name": "가을",
     "name_en": "Gaeul (IVE)",
     "country": "KR",
     "face_shape": "Heart",
-    "face_tokens": [],
+    "face_tokens": [
+      "f10cba988b8119f1713ba4652dbc59a3",
+      "82486064617152285a0e958439aa22e2",
+      "b12af359fefd0ad3a9d06b29ad965aae"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -617,14 +780,21 @@
         "smart casual"
       ],
       "vibe": "Elegant and understated sophistication with a preference for timeless, effortlessly polished aesthetics."
-    }
+    },
+    "image_paths": [
+      "data/images/가을/01.jpg",
+      "data/images/가을/02.jpg",
+      "data/images/가을/04.jpg"
+    ]
   },
   {
     "name": "설현",
     "name_en": "Seolhyun (AOA)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "806b65f7f78117fac108c8fd7a0eec18"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -648,14 +818,20 @@
         "layered looks"
       ],
       "vibe": "Seolhyun embodies a sophisticated yet approachable aesthetic with polished femininity, blending girl-crush confidence with timeless elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/설현/03.jpg"
+    ]
   },
   {
     "name": "소희",
     "name_en": "Sohee (Wonder Girls)",
     "country": "KR",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "d4a5fdf4b20422087e4693fb66fc844f",
+      "04fc6adfbdb664b057ad527fdea90e9b"
+    ],
     "style": {
       "makeup": [
         "dewy skin",
@@ -679,14 +855,23 @@
         "Y2K aesthetics"
       ],
       "vibe": "Elegant and youthful with a blend of girl-crush sophistication and trendy early 2000s charm."
-    }
+    },
+    "image_paths": [
+      "data/images/소희/01.png",
+      "data/images/소희/04.jpg",
+      "data/images/소희/05.webp"
+    ]
   },
   {
     "name": "하니",
     "name_en": "Hanni (NewJeans)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "45710247c46208173cc90120b9493be0",
+      "9855f40ec48efb887a39ebfbf0ccd666",
+      "8ab7fb5cd11cb07ae2d72107447952b5"
+    ],
     "style": {
       "makeup": [
         "natural glowing skin",
@@ -710,14 +895,22 @@
         "preppy casual"
       ],
       "vibe": "Effortlessly cool Y2K aesthetic with a fresh, approachable natural beauty that balances vintage-inspired fashion with modern minimalism."
-    }
+    },
+    "image_paths": [
+      "data/images/하니/02.jpg",
+      "data/images/하니/03.jpg",
+      "data/images/하니/05.jpg"
+    ]
   },
   {
     "name": "이나영",
     "name_en": "Lee Na-young",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "2c91ab8265f0fe59347aa5b6a7fe8f95",
+      "cda3d2da286e7b6724cf9ade90c9914b"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -741,14 +934,21 @@
         "minimalist chic"
       ],
       "vibe": "Sophisticated, timeless elegance with a focus on natural beauty and refined minimalism."
-    }
+    },
+    "image_paths": [
+      "data/images/이나영/03.jpg",
+      "data/images/이나영/05.jpg"
+    ]
   },
   {
     "name": "신민아",
     "name_en": "Shin Min-a",
     "country": "KR",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "04e36a0fec8782a4a4187b1faba62a50",
+      "aa67d2cbd1a2fede5873f0a63a661fc2"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -772,14 +972,21 @@
         "luxury basics"
       ],
       "vibe": "Effortlessly elegant with a sophisticated, girl-next-door charm that balances minimalism with refined polish."
-    }
+    },
+    "image_paths": [
+      "data/images/신민아/03.jpg",
+      "data/images/신민아/05.jpg"
+    ]
   },
   {
     "name": "로제",
     "name_en": "Rosé (BLACKPINK)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "0669fca883cd52d780ff24eb917006f4",
+      "ef9eaa2a3061bd97ac9baae8742578b3"
+    ],
     "style": {
       "makeup": [
         "glossy lips",
@@ -803,14 +1010,21 @@
         "edgy chic"
       ],
       "vibe": "Effortlessly cool and polished with a blend of girl-next-door softness and high-fashion sophistication."
-    }
+    },
+    "image_paths": [
+      "data/images/로제/04.jpg",
+      "data/images/로제/05.jpg"
+    ]
   },
   {
     "name": "슬기",
     "name_en": "Seulgi (Red Velvet)",
     "country": "KR",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "b68f254ea938d8f2b721ee4f17d6c964",
+      "a7d795ce7fd269e28b2db7fafd74afbb"
+    ],
     "style": {
       "makeup": [
         "bold red lips",
@@ -834,14 +1048,23 @@
         "classic minimalist"
       ],
       "vibe": "Seulgi embodies a sophisticated blend of edgy elegance with understated luxury, balancing bold makeup and styling choices with timeless, refined pieces."
-    }
+    },
+    "image_paths": [
+      "data/images/슬기/02.jpg",
+      "data/images/슬기/04.jpg",
+      "data/images/슬기/05.webp"
+    ]
   },
   {
     "name": "예지",
     "name_en": "Yeji (ITZY)",
     "country": "KR",
     "face_shape": "Heart",
-    "face_tokens": [],
+    "face_tokens": [
+      "6b50061f22ac7e310395dbab1f973c1a",
+      "035e7a0b79d5e1ae4d734b24830bb5b6",
+      "98b977024d487877dce058159299aeac"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -865,14 +1088,22 @@
         "monochromatic looks"
       ],
       "vibe": "Effortlessly chic with a balance of edgy sophistication and youthful minimalism, blending casual confidence with polished elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/예지/01.jpg",
+      "data/images/예지/02.jpg",
+      "data/images/예지/05.png"
+    ]
   },
   {
     "name": "문가영",
     "name_en": "Moon Ga-young",
     "country": "KR",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "cc8c9b57429361e1e4bb96bf8e77720f",
+      "b6890616948604426d866584f7f86066"
+    ],
     "style": {
       "makeup": [
         "gradient lips",
@@ -896,14 +1127,21 @@
         "high-waisted bottoms"
       ],
       "vibe": "sophisticated minimalist elegance with a feminine, polished everyday luxury aesthetic"
-    }
+    },
+    "image_paths": [
+      "data/images/문가영/01.jpg",
+      "data/images/문가영/04.jpeg"
+    ]
   },
   {
     "name": "김유정",
     "name_en": "Kim Yoo-jung",
     "country": "KR",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "ae1110361ae3911a0505d7bce36502ae",
+      "ace6c0455f18f6abf84280487f3a6076"
+    ],
     "style": {
       "makeup": [
         "soft natural glow",
@@ -927,14 +1165,21 @@
         "minimalist chic"
       ],
       "vibe": "Effortlessly elegant with a fresh, youthful sophistication that balances girl-next-door charm with polished luxury."
-    }
+    },
+    "image_paths": [
+      "data/images/김유정/01.png",
+      "data/images/김유정/02.jpg",
+      "data/images/김유정/03.jpg"
+    ]
   },
   {
     "name": "혜인",
     "name_en": "Hyein (NewJeans)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "8e5f278b068d9f7b3e4f16bc7b96e859"
+    ],
     "style": {
       "makeup": [
         "natural skin tone",
@@ -958,14 +1203,21 @@
         "Y2K elements"
       ],
       "vibe": "Fresh, youthful, and effortlessly cool with a blend of Y2K nostalgia and modern minimalism."
-    }
+    },
+    "image_paths": [
+      "data/images/혜인/03.jpg"
+    ]
   },
   {
     "name": "민지",
     "name_en": "Minji (NewJeans)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "1f7889d572410498567f19c1b53732c6",
+      "05eedb601ef24598d2b6e6f7dda37212",
+      "b923b2a718bc78740cde183436d13a28"
+    ],
     "style": {
       "makeup": [
         "clean-girl",
@@ -989,7 +1241,14 @@
         "school-uniform-aesthetic"
       ],
       "vibe": "Fresh, effortless, and girl-next-door elegance with a nostalgic Y2K preppy edge"
-    }
+    },
+    "image_paths": [
+      "data/images/민지/01.webp",
+      "data/images/민지/02.webp",
+      "data/images/민지/03.png",
+      "data/images/민지/04.jpg",
+      "data/images/민지/05.webp"
+    ]
   },
   {
     "name": "리아",
@@ -1020,14 +1279,21 @@
         "tailored pieces"
       ],
       "vibe": "effortlessly elegant with a modern, understated approach to fashion that balances girl-crush energy with polished sophistication."
-    }
+    },
+    "image_paths": [
+      "data/images/리아/01.jpg"
+    ]
   },
   {
     "name": "유나",
     "name_en": "Yuna (ITZY)",
     "country": "KR",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "b8a81fabe14647197f053d722ce07d0a",
+      "ea352770f28ed3b14f875729fd158680",
+      "820b23f8ea03b68d987568a904bf691c"
+    ],
     "style": {
       "makeup": [
         "natural-glowing",
@@ -1051,14 +1317,24 @@
         "streetwear-inspired"
       ],
       "vibe": "Fresh, youthful elegance blending sophisticated minimalism with playful K-pop edge and effortless cool-girl aesthetics."
-    }
+    },
+    "image_paths": [
+      "data/images/유나/01.jpeg",
+      "data/images/유나/03.jpg",
+      "data/images/유나/05.png"
+    ]
   },
   {
     "name": "키타가와 케이코",
     "name_en": "Keiko Kitagawa",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "c974c0631c59d815a405f6b02d721895",
+      "fbfc2922e292863dac13916703c87cd5",
+      "eb2a47111076eb3e81b7d55b2af64e4c",
+      "c017402029c5bb0e21a68e164a95fd3d"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -1082,14 +1358,24 @@
         "refined sophistication"
       ],
       "vibe": "Timeless Japanese elegance with understated luxury and polished minimalist sensibility."
-    }
+    },
+    "image_paths": [
+      "data/images/키타가와_케이코/02.jpg",
+      "data/images/키타가와_케이코/03.jpg",
+      "data/images/키타가와_케이코/04.jpg",
+      "data/images/키타가와_케이코/05.jpg"
+    ]
   },
   {
     "name": "혼다 미나코",
     "name_en": "Minako Honda",
     "country": "JP",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "82a963625afc5894785eb49d962903b4",
+      "8e9ebc5619aac99a7e7da44e17a15f2b",
+      "588a01a2ae7a9c119610afe94984516e"
+    ],
     "style": {
       "makeup": [
         "bold eyeshadow",
@@ -1113,14 +1399,22 @@
         "sophisticated accessories"
       ],
       "vibe": "Timeless elegance with a touch of glamorous sophistication and feminine grace."
-    }
+    },
+    "image_paths": [
+      "data/images/혼다_미나코/02.jpg",
+      "data/images/혼다_미나코/03.jpeg",
+      "data/images/혼다_미나코/05.jpg"
+    ]
   },
   {
     "name": "나카야마 미호",
     "name_en": "Miho Nakayama",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "935aa3c845444a2deaf155701bbf5f82",
+      "ba259a9c00d1a4da7536da0802c70f65"
+    ],
     "style": {
       "makeup": [
         "bold eyeshadow",
@@ -1144,14 +1438,21 @@
         "sophisticated pieces"
       ],
       "vibe": "Glamorous 80s-90s elegance with bold makeup and voluminous hair, embodying sophisticated Japanese beauty standards."
-    }
+    },
+    "image_paths": [
+      "data/images/나카야마_미호/01.jpg",
+      "data/images/나카야마_미호/02.jpg",
+      "data/images/나카야마_미호/05.webp"
+    ]
   },
   {
     "name": "마츠이 쥬리나",
     "name_en": "Jurina Matsui",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "a2dfb7db696bc9ab9229c71b4e5961d7"
+    ],
     "style": {
       "makeup": [
         "gradient eyeshadow",
@@ -1175,7 +1476,14 @@
         "pleated skirts"
       ],
       "vibe": "Youthful, innocent charm with a balance of girl-next-door appeal and polished idol elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/마츠이_쥬리나/01.webp",
+      "data/images/마츠이_쥬리나/02.webp",
+      "data/images/마츠이_쥬리나/03.webp",
+      "data/images/마츠이_쥬리나/04.webp",
+      "data/images/마츠이_쥬리나/05.jpg"
+    ]
   },
   {
     "name": "아야세 하루카",
@@ -1206,14 +1514,22 @@
         "sophisticated casual"
       ],
       "vibe": "Effortlessly elegant with a refined, understated sophistication that balances natural beauty with polished minimalism."
-    }
+    },
+    "image_paths": [
+      "data/images/아야세_하루카/02.jpg"
+    ]
   },
   {
     "name": "이시하라 사토미",
     "name_en": "Satomi Ishihara",
     "country": "JP",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "ba40a6bada983bd102867fec74942bcc",
+      "46a4fea6e05a76cebde639c9ee9d2b09",
+      "cf4788c97420c25f8c8f67e1caab2d12",
+      "ad617cb528b376393f699228e7ece89b"
+    ],
     "style": {
       "makeup": [
         "natural",
@@ -1237,14 +1553,25 @@
         "sophisticated casual"
       ],
       "vibe": "Effortlessly refined with a polished yet approachable elegance that balances modern minimalism with timeless Japanese sophistication."
-    }
+    },
+    "image_paths": [
+      "data/images/이시하라_사토미/01.jpg",
+      "data/images/이시하라_사토미/02.jpg",
+      "data/images/이시하라_사토미/03.jpg",
+      "data/images/이시하라_사토미/05.jpg"
+    ]
   },
   {
     "name": "미야자키 아오이",
     "name_en": "Aoi Miyazaki",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "4ae350c3eb04a15c81dfd685c27fed70",
+      "5b8e66e266f8bdc7fe75ff2b5f04ca0e",
+      "e26b03fd91ec4d950fb8c4e24030c8e4",
+      "312fe1aa687ecea36f2638db2b8a54e8"
+    ],
     "style": {
       "makeup": [
         "minimal",
@@ -1268,7 +1595,13 @@
         "classic pieces"
       ],
       "vibe": "Effortlessly sophisticated with a quiet, ethereal elegance that prioritizes natural beauty and timeless refinement."
-    }
+    },
+    "image_paths": [
+      "data/images/미야자키_아오이/02.jpg",
+      "data/images/미야자키_아오이/03.jpg",
+      "data/images/미야자키_아오이/04.jpeg",
+      "data/images/미야자키_아오이/05.jpg"
+    ]
   },
   {
     "name": "나가사와 마사미",
@@ -1299,14 +1632,22 @@
         "sophisticated elegance"
       ],
       "vibe": "Effortlessly refined with a focus on understated elegance and timeless Japanese beauty standards."
-    }
+    },
+    "image_paths": [
+      "data/images/나가사와_마사미/01.jpg",
+      "data/images/나가사와_마사미/04.webp",
+      "data/images/나가사와_마사미/05.webp"
+    ]
   },
   {
     "name": "야마다 유",
     "name_en": "Yu Yamada",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "89cfe62768d366e259932b819744ddb6",
+      "7a39d4ea6e223aa7558bd24626a20bb1"
+    ],
     "style": {
       "makeup": [
         "natural",
@@ -1330,14 +1671,23 @@
         "layered"
       ],
       "vibe": "Modern minimalist with an effortless, approachable elegance that balances sophistication with everyday wearability."
-    }
+    },
+    "image_paths": [
+      "data/images/야마다_유/02.jpg",
+      "data/images/야마다_유/03.jpg",
+      "data/images/야마다_유/05.jpg"
+    ]
   },
   {
     "name": "후쿠다 마유코",
     "name_en": "Mayuko Fukuda",
     "country": "JP",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "b093923049d05de268df269b2508fac6",
+      "9922cfcd1f3836989bea9f68c8a4e012",
+      "d5e40c6ba9d85c62b82cab786e5905c4"
+    ],
     "style": {
       "makeup": [
         "natural skin",
@@ -1361,14 +1711,21 @@
         "casual-chic"
       ],
       "vibe": "Effortlessly cool and understated Japanese-inspired minimalism with a touch of retro-vintage charm."
-    }
+    },
+    "image_paths": [
+      "data/images/후쿠다_마유코/03.jpg",
+      "data/images/후쿠다_마유코/04.jpg",
+      "data/images/후쿠다_마유코/05.jpg"
+    ]
   },
   {
     "name": "마츠다 세이코",
     "name_en": "Seiko Matsuda",
     "country": "JP",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "235df3fd89d0873eda2925a945c85020"
+    ],
     "style": {
       "makeup": [
         "soft natural blush",
@@ -1392,7 +1749,13 @@
         "refined femininity"
       ],
       "vibe": "Timeless Japanese elegance with a graceful, sophisticated aesthetic that emphasizes natural beauty and understated luxury."
-    }
+    },
+    "image_paths": [
+      "data/images/마츠다_세이코/01.jpg",
+      "data/images/마츠다_세이코/02.jpg",
+      "data/images/마츠다_세이코/04.jpg",
+      "data/images/마츠다_세이코/05.jpg"
+    ]
   },
   {
     "name": "니시노 나나세",
@@ -1423,14 +1786,21 @@
         "sophisticated casual"
       ],
       "vibe": "Clean, elegant Japanese girl-next-door aesthetic with understated sophistication and timeless appeal."
-    }
+    },
+    "image_paths": [
+      "data/images/니시노_나나세/01.webp",
+      "data/images/니시노_나나세/03.jpg"
+    ]
   },
   {
     "name": "요시오카 리호",
     "name_en": "Riho Yoshioka",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "b4eae703cfaad67c4b33a99925d352ea",
+      "e630dd1800b1c1faeb6ba504ff6019af"
+    ],
     "style": {
       "makeup": [
         "soft natural glow",
@@ -1454,14 +1824,25 @@
         "contemporary casual"
       ],
       "vibe": "Modern Japanese elegance with a soft, approachable sensibility and contemporary minimalist aesthetic."
-    }
+    },
+    "image_paths": [
+      "data/images/요시오카_리호/01.webp",
+      "data/images/요시오카_리호/02.jpg",
+      "data/images/요시오카_리호/03.jpeg",
+      "data/images/요시오카_리호/04.jpg",
+      "data/images/요시오카_리호/05.jpg"
+    ]
   },
   {
     "name": "하마베 미나미",
     "name_en": "Minami Hamabe",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "849dc3e9de68c37d57add54e17e3f8d3",
+      "18b3e8d9e974449ec84444bbdf1c6e92",
+      "f318c4bead1db13b286b937dbb31447a"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -1485,14 +1866,24 @@
         "denim"
       ],
       "vibe": "Clean, effortless minimalism with a sophisticated yet approachable Japanese beauty sensibility."
-    }
+    },
+    "image_paths": [
+      "data/images/하마베_미나미/01.jpg",
+      "data/images/하마베_미나미/03.jpg",
+      "data/images/하마베_미나미/04.jpg",
+      "data/images/하마베_미나미/05.jpg"
+    ]
   },
   {
     "name": "히로세 스즈",
     "name_en": "Suzu Hirose",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "cd1a1f7f0298c3de324298428b83e729",
+      "04e3b001a625fc6779c02dcba609a169",
+      "5c158f5a966c8cd0e6b09311e502c12b"
+    ],
     "style": {
       "makeup": [
         "natural glowing skin",
@@ -1516,14 +1907,21 @@
         "effortless elegance"
       ],
       "vibe": "Modern, understated sophistication with an emphasis on natural beauty and refined, clean-lined style."
-    }
+    },
+    "image_paths": [
+      "data/images/히로세_스즈/03.jpg",
+      "data/images/히로세_스즈/04.jpg",
+      "data/images/히로세_스즈/05.jpg"
+    ]
   },
   {
     "name": "아리무라 카스미",
     "name_en": "Kasumi Arimura",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "b3709ef6d457cc637cbcbdde30cba86b"
+    ],
     "style": {
       "makeup": [
         "dewy skin",
@@ -1547,7 +1945,11 @@
         "elegant simplicity"
       ],
       "vibe": "Effortlessly sophisticated with a focus on natural beauty, clean lines, and understated luxury."
-    }
+    },
+    "image_paths": [
+      "data/images/아리무라_카스미/01.jpg",
+      "data/images/아리무라_카스미/05.jpg"
+    ]
   },
   {
     "name": "쿠로키 하루",
@@ -1578,7 +1980,12 @@
         "elegant simplicity"
       ],
       "vibe": "Effortlessly sophisticated with a focus on natural beauty and understated elegance that exudes quiet confidence."
-    }
+    },
+    "image_paths": [
+      "data/images/쿠로키_하루/03.webp",
+      "data/images/쿠로키_하루/04.jpg",
+      "data/images/쿠로키_하루/05.jpg"
+    ]
   },
   {
     "name": "쿠도 하루카",
@@ -1609,14 +2016,25 @@
         "contemporary basics"
       ],
       "vibe": "Modern minimalist with an understated elegance and girl-next-door sophistication."
-    }
+    },
+    "image_paths": [
+      "data/images/쿠도_하루카/01.jpg",
+      "data/images/쿠도_하루카/03.jpg",
+      "data/images/쿠도_하루카/04.jpg",
+      "data/images/쿠도_하루카/05.jpg"
+    ]
   },
   {
     "name": "타베 미카코",
     "name_en": "Mikako Tabe",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "910a9d158e1f6ea7592a6e36898e5012",
+      "d949bfc432770ca4f1866ea8c7ee9c71",
+      "3b9199f61607abcd117b12250b2914f2",
+      "c6a15321d02578e44b8129b6fa71f364"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -1640,14 +2058,23 @@
         "neutral palette"
       ],
       "vibe": "understated elegance with a focus on refined simplicity and natural beauty."
-    }
+    },
+    "image_paths": [
+      "data/images/타베_미카코/02.jpg",
+      "data/images/타베_미카코/03.jpg",
+      "data/images/타베_미카코/04.jpg",
+      "data/images/타베_미카코/05.jpg"
+    ]
   },
   {
     "name": "나카조 아야미",
     "name_en": "Ayami Nakajo",
     "country": "JP",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "9d76dff30d410b1f8bbe0045027cc283",
+      "35fbc377611606db5b15a33d44bc8402"
+    ],
     "style": {
       "makeup": [
         "dewy skin",
@@ -1671,14 +2098,24 @@
         "feminine silhouettes"
       ],
       "vibe": "Modern, sophisticated elegance with a fresh, understated beauty that balances femininity with contemporary minimalism."
-    }
+    },
+    "image_paths": [
+      "data/images/나카조_아야미/03.webp",
+      "data/images/나카조_아야미/04.jpg",
+      "data/images/나카조_아야미/05.jpg"
+    ]
   },
   {
     "name": "양자경",
     "name_en": "Michelle Yeoh",
     "country": "MY",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "9d9331603a5cbed27387572c66c626a0",
+      "a1c948562ec0db038bbe4267e3a435b7",
+      "ae907a016aa7d25f2d2a7123871420d6",
+      "3caaebaa440349759a7697ab735f3758"
+    ],
     "style": {
       "makeup": [
         "bold red lips",
@@ -1702,14 +2139,24 @@
         "monochromatic"
       ],
       "vibe": "Sophisticated, powerful elegance blending timeless femininity with commanding presence and refined luxury."
-    }
+    },
+    "image_paths": [
+      "data/images/양자경/02.jpg",
+      "data/images/양자경/03.jpg",
+      "data/images/양자경/04.jpg",
+      "data/images/양자경/05.jpg"
+    ]
   },
   {
     "name": "탕웨이",
     "name_en": "Tang Wei",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "ba195afb14ff2a37738e4ec2f2fe136b",
+      "70b8bba18c042008ea1e495a7f1dd6d7",
+      "b8ffaccfcfb377cc0cdbad11582c6c14"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -1733,14 +2180,23 @@
         "understated luxury"
       ],
       "vibe": "Sophisticated minimalism with an emphasis on refined elegance and timeless, polished beauty."
-    }
+    },
+    "image_paths": [
+      "data/images/탕웨이/02.jpg",
+      "data/images/탕웨이/03.jpg",
+      "data/images/탕웨이/04.jpg"
+    ]
   },
   {
     "name": "류이페이",
     "name_en": "Liu Yifei",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "17adc9ccb97eaae8afd4258aa60a7b6f",
+      "3db90df0063e52cd804bb24588f33334",
+      "545a24eebfd9ef49c9141ae7a1e30405"
+    ],
     "style": {
       "makeup": [
         "natural-glowing",
@@ -1764,14 +2220,23 @@
         "delicate-fabrics"
       ],
       "vibe": "ethereal elegance with timeless sophistication and understated glamour"
-    }
+    },
+    "image_paths": [
+      "data/images/류이페이/01.jpg",
+      "data/images/류이페이/03.jpg",
+      "data/images/류이페이/04.jpg"
+    ]
   },
   {
     "name": "구력나자",
     "name_en": "Dilraba Dilmurat",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "db6e6e20b8a46ca781f13c92c15fdb12",
+      "cd2da23768f9bde89b677d014d651a14",
+      "914a41227ce608565a265fdafa4eb297"
+    ],
     "style": {
       "makeup": [
         "dewy-skin",
@@ -1795,14 +2260,23 @@
         "luxury-brands"
       ],
       "vibe": "Modern sophistication with a balance of ethereal femininity and polished luxury elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/구력나자/01.jpg",
+      "data/images/구력나자/03.jpg",
+      "data/images/구력나자/04.jpg"
+    ]
   },
   {
     "name": "정상",
     "name_en": "Zheng Shuang",
     "country": "CN",
     "face_shape": "Heart",
-    "face_tokens": [],
+    "face_tokens": [
+      "2d7ebf9e4d14b044c04b63a44b816cfd",
+      "eac38cb7ba930c1232e4cf54b169f414",
+      "22d8dc041a8bfa013642de14a1fbbae4"
+    ],
     "style": {
       "makeup": [
         "dewy skin",
@@ -1826,14 +2300,23 @@
         "elegant accessories"
       ],
       "vibe": "Ethereal and romantic with a polished, girl-next-door elegance that balances sophistication with youthful charm."
-    }
+    },
+    "image_paths": [
+      "data/images/정상/01.jpg",
+      "data/images/정상/02.jpg",
+      "data/images/정상/03.jpg",
+      "data/images/정상/05.jpg"
+    ]
   },
   {
     "name": "판빙빙",
     "name_en": "Fan Bingbing",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "f6d8b6ef94b1c9f1859d3e7664519de5",
+      "3c9b2da05e58ad977ba04eebfa644653"
+    ],
     "style": {
       "makeup": [
         "bold red lips",
@@ -1857,14 +2340,21 @@
         "jewel tones"
       ],
       "vibe": "Glamorous sophistication with bold confidence, blending Eastern elegance with Western red carpet drama."
-    }
+    },
+    "image_paths": [
+      "data/images/판빙빙/02.jpg",
+      "data/images/판빙빙/05.jpg"
+    ]
   },
   {
     "name": "리빙빙",
     "name_en": "Li Bingbing",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "fc2198af21f6661da6262f5c181088d5",
+      "8f31b198dd8a600d63edb5e6a8fcf59f"
+    ],
     "style": {
       "makeup": [
         "bold red lips",
@@ -1888,7 +2378,11 @@
         "statement pieces"
       ],
       "vibe": "Sophisticated and glamorous with a modern edge, balancing powerful femininity with understated elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/리빙빙/01.png",
+      "data/images/리빙빙/02.jpg"
+    ]
   },
   {
     "name": "왕페이",
@@ -1919,14 +2413,19 @@
         "high-fashion couture"
       ],
       "vibe": "Faye Wong embodies a bold, avant-garde aesthetic that blends minimalism with theatrical drama, establishing herself as an iconic trendsetter who defies conventional beauty standards."
-    }
+    },
+    "image_paths": []
   },
   {
     "name": "장쯔이",
     "name_en": "Zhang Ziyi",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "6dc6a32394eb546a08bf892a9db3f37e",
+      "8a7295a5d44fb51fd689f73f33e76d62",
+      "2f6c1b38ab3b1c07d78f8b38d3dc0044"
+    ],
     "style": {
       "makeup": [
         "bold red lips",
@@ -1950,14 +2449,21 @@
         "luxury fabrics"
       ],
       "vibe": "Timeless sophistication with a balance of modern elegance and classic Hollywood glamour."
-    }
+    },
+    "image_paths": [
+      "data/images/장쯔이/02.jpg",
+      "data/images/장쯔이/03.jpg",
+      "data/images/장쯔이/04.jpg"
+    ]
   },
   {
     "name": "공리",
     "name_en": "Gong Li",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "0f4ce7ff8c0b762f7332aa7e2f47b65b"
+    ],
     "style": {
       "makeup": [
         "bold red lips",
@@ -1981,14 +2487,21 @@
         "timeless pieces"
       ],
       "vibe": "Timeless elegance blending classic Chinese aesthetics with refined, sophisticated international glamour."
-    }
+    },
+    "image_paths": [
+      "data/images/공리/02.jpg"
+    ]
   },
   {
     "name": "양미",
     "name_en": "Yang Mi",
     "country": "CN",
     "face_shape": "Heart",
-    "face_tokens": [],
+    "face_tokens": [
+      "b9015844c692c3354e262d68eb3fb2b6",
+      "c0b76f617a96d7e63b3f700bcb996d79",
+      "88298513e73d12266dc79988db627de6"
+    ],
     "style": {
       "makeup": [
         "cat-eye liner",
@@ -2012,14 +2525,23 @@
         "structured tailoring"
       ],
       "vibe": "Sophisticated and ethereal with a modern minimalist approach that balances timeless elegance with contemporary edge."
-    }
+    },
+    "image_paths": [
+      "data/images/양미/02.jpg",
+      "data/images/양미/03.jpg",
+      "data/images/양미/05.jpeg"
+    ]
   },
   {
     "name": "가오위안위안",
     "name_en": "Gao Yuanyuan",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "509a9afc636e8c17b82d0a18011a71d2",
+      "da4674326122caa60a92289326ff92b9",
+      "c52a11b5330b7749d99463245c266284"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -2043,14 +2565,22 @@
         "luxury fabrics"
       ],
       "vibe": "Effortlessly sophisticated with a refined, understated elegance that balances timeless glamour with modern minimalism."
-    }
+    },
+    "image_paths": [
+      "data/images/가오위안위안/01.jpg",
+      "data/images/가오위안위안/02.jpg",
+      "data/images/가오위안위안/05.jpg"
+    ]
   },
   {
     "name": "린쯔링",
     "name_en": "Lin Chi-ling",
     "country": "TW",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "03af45d88b78b40393e6150adfca076b",
+      "dd768d3e1ea8366d39349b54cced2274"
+    ],
     "style": {
       "makeup": [
         "flawless complexion",
@@ -2074,14 +2604,21 @@
         "sophisticated minimalism"
       ],
       "vibe": "Timeless elegance with polished sophistication and effortless glamour that transcends trends."
-    }
+    },
+    "image_paths": [
+      "data/images/린쯔링/02.jpg",
+      "data/images/린쯔링/03.jpg"
+    ]
   },
   {
     "name": "서기",
     "name_en": "Shu Qi",
     "country": "TW",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "3cb73fced4f19ab7945f2f7b2df38355",
+      "6f27ca22de1beff9eb7c4020c0ae0d2b"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -2105,14 +2642,22 @@
         "understated luxury"
       ],
       "vibe": "Effortlessly sophisticated with a timeless elegance that balances sensuality and refined restraint."
-    }
+    },
+    "image_paths": [
+      "data/images/서기/03.jpg",
+      "data/images/서기/05.jpg"
+    ]
   },
   {
     "name": "오우양나나",
     "name_en": "Ouyang Nana",
     "country": "TW",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "8cd3b90bb9d4173cafd2cd6f53ae2c60",
+      "6ec0ad00ca145fd0e9a6b6786a26f25e",
+      "9cbb173c41f7f651842323d27c210ce8"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -2136,14 +2681,24 @@
         "tailored pieces"
       ],
       "vibe": "effortlessly elegant with a clean, understated sophistication that balances youthful freshness with refined minimalism."
-    }
+    },
+    "image_paths": [
+      "data/images/오우양나나/03.jpg",
+      "data/images/오우양나나/04.jpg",
+      "data/images/오우양나나/05.jpg"
+    ]
   },
   {
     "name": "왕쯔원",
     "name_en": "Wang Ziwen",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "9f7f4de9d58bdad78a8eada1aa9df966",
+      "25893856171a1dead723193e5d0810f8",
+      "0c76eb563763eddef7d982b5d1d5a89a",
+      "174ec89533a50bd71b5fbb324f58130a"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -2167,7 +2722,13 @@
         "sophisticated minimalism"
       ],
       "vibe": "Timeless elegance with refined sophistication and understated glamour, embodying modern classic beauty."
-    }
+    },
+    "image_paths": [
+      "data/images/왕쯔원/01.jpg",
+      "data/images/왕쯔원/02.jpg",
+      "data/images/왕쯔원/03.jpg",
+      "data/images/왕쯔원/04.jpg"
+    ]
   },
   {
     "name": "조려영",
@@ -2198,14 +2759,18 @@
         "delicate fabrics"
       ],
       "vibe": "Timeless elegance with a soft, feminine grace that balances traditional beauty with modern sophistication."
-    }
+    },
+    "image_paths": []
   },
   {
     "name": "장혜문",
     "name_en": "Zhang Huiwen",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "e95cc72bd39cb4795182d2d83d4988a4",
+      "55cb04e04dc321443ca7479c2a56141d"
+    ],
     "style": {
       "makeup": [
         "dewy skin",
@@ -2229,14 +2794,22 @@
         "sophisticated silhouettes"
       ],
       "vibe": "Effortlessly elegant with a refined, understated luxe aesthetic that balances minimalism with timeless sophistication."
-    }
+    },
+    "image_paths": [
+      "data/images/장혜문/02.jpg",
+      "data/images/장혜문/05.jpg"
+    ]
   },
   {
     "name": "진의함",
     "name_en": "Jin Yihan",
     "country": "CN",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "2276f9f28dae910a04dfc97982c8f0a5",
+      "e8a9f39efac373bd4847d367cb4ea681",
+      "e5cafa0869e80ef9768186ecc21485a4"
+    ],
     "style": {
       "makeup": [
         "natural",
@@ -2260,14 +2833,23 @@
         "sophisticated basics"
       ],
       "vibe": "Effortlessly elegant with a refined, understated luxury aesthetic that balances minimalism with subtle femininity."
-    }
+    },
+    "image_paths": [
+      "data/images/진의함/01.jpg",
+      "data/images/진의함/02.jpg",
+      "data/images/진의함/03.png"
+    ]
   },
   {
     "name": "리사",
     "name_en": "Lisa (BLACKPINK)",
     "country": "TH",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "65d1a3a780c2a30de1eefb0003f56e89",
+      "14bad72a1b048458854db655b99788a0",
+      "9957f142cc031d727b826707e079be69"
+    ],
     "style": {
       "makeup": [
         "bold graphic eyeliner",
@@ -2291,14 +2873,22 @@
         "tailored silhouettes"
       ],
       "vibe": "Effortlessly luxe with a perfect blend of edgy minimalism and bold statement pieces that exude confident sophistication."
-    }
+    },
+    "image_paths": [
+      "data/images/리사/01.jpg",
+      "data/images/리사/02.jpg",
+      "data/images/리사/03.jpg",
+      "data/images/리사/04.jpg"
+    ]
   },
   {
     "name": "니타야 나웃차",
     "name_en": "Nuttaa Nutcha Sukonthaman",
     "country": "TH",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "aeae8ca198497136eb09f99416c5f6e2"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -2322,14 +2912,21 @@
         "sophisticated layers"
       ],
       "vibe": "Modern Thai elegance with a refined, understated luxury aesthetic that balances sophistication with natural beauty."
-    }
+    },
+    "image_paths": [
+      "data/images/니타야_나웃차/02.jpg"
+    ]
   },
   {
     "name": "라리사 마노반",
     "name_en": "Lalisa Manoban",
     "country": "TH",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "4724b506f2589ec0881fc7c207c5b534",
+      "bb05a4327083ae087d933a1a6eeb872d",
+      "7b75c49f092a281d5ac583ac738578db"
+    ],
     "style": {
       "makeup": [
         "bold-eyeliner",
@@ -2353,14 +2950,25 @@
         "bold-accessories"
       ],
       "vibe": "Edgy luxury meets confident street style with a bold, modern Asian-inspired aesthetic that commands attention."
-    }
+    },
+    "image_paths": [
+      "data/images/라리사_마노반/01.jpg",
+      "data/images/라리사_마노반/02.jpg",
+      "data/images/라리사_마노반/04.jpg",
+      "data/images/라리사_마노반/05.jpg"
+    ]
   },
   {
     "name": "디타 폰티스",
     "name_en": "Dita Von Teese",
     "country": "ID",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "2d282fb06d92ad711d3614e18bbcc602",
+      "90d872e73bb710671b1513413e80ba9a",
+      "88b76a393cbc79c911428c8f63be998a",
+      "619f7dac7dfee10f148648d359e903dd"
+    ],
     "style": {
       "makeup": [
         "red lips",
@@ -2384,14 +2992,23 @@
         "retro elegance"
       ],
       "vibe": "Classic 1950s burlesque glamour with theatrical sophistication and timeless vintage allure."
-    }
+    },
+    "image_paths": [
+      "data/images/디타_폰티스/01.jpg",
+      "data/images/디타_폰티스/03.jpg",
+      "data/images/디타_폰티스/04.jpg",
+      "data/images/디타_폰티스/05.jpg"
+    ]
   },
   {
     "name": "하트 에반젤리스타",
     "name_en": "Heart Evangelista",
     "country": "PH",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "279ee5bae82b977bddf476806c20482c",
+      "5997dfcdec86de22da7db7bb20e4411d"
+    ],
     "style": {
       "makeup": [
         "bold eyeshadow",
@@ -2415,14 +3032,22 @@
         "high-end fashion"
       ],
       "vibe": "Sophisticated Filipino fashionista with a love for luxury, glamorous details, and polished high-fashion aesthetics."
-    }
+    },
+    "image_paths": [
+      "data/images/하트_에반젤리스타/03.jpg",
+      "data/images/하트_에반젤리스타/04.jpeg"
+    ]
   },
   {
     "name": "나딘 루스트레",
     "name_en": "Nadine Lustre",
     "country": "PH",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "b9d3b588493e7e8c917fb33e090f30c4",
+      "fa25fdbe1135e2c759ed9749e067b069",
+      "63e8f7d05130c4a303b122f616c22941"
+    ],
     "style": {
       "makeup": [
         "dewy skin",
@@ -2446,14 +3071,23 @@
         "athleisure"
       ],
       "vibe": "Fresh, approachable girl-next-door with a subtle luxe touch and effortless modern elegance."
-    }
+    },
+    "image_paths": [
+      "data/images/나딘_루스트레/01.jpeg",
+      "data/images/나딘_루스트레/02.jpg",
+      "data/images/나딘_루스트레/03.jpg"
+    ]
   },
   {
     "name": "메이 무라사키",
     "name_en": "May Murasaki",
     "country": "TH",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "2471808a6d7f8be29fe640dad930b473",
+      "95374ad5cff3d76a7d7bde95d0a48feb",
+      "e0039366d0a075d871b6d31cb2bb7aa6"
+    ],
     "style": {
       "makeup": [
         "bold eye makeup",
@@ -2477,14 +3111,22 @@
         "statement accessories"
       ],
       "vibe": "Modern sophistication with a touch of dramatic elegance and contemporary Japanese sensibility."
-    }
+    },
+    "image_paths": [
+      "data/images/메이_무라사키/02.jpg",
+      "data/images/메이_무라사키/04.jpg",
+      "data/images/메이_무라사키/05.jpg"
+    ]
   },
   {
     "name": "세린 사피나즈",
     "name_en": "Sherin Sapinaz",
     "country": "MY",
     "face_shape": "Oval",
-    "face_tokens": [],
+    "face_tokens": [
+      "3011fc68b3151e3ae90c02451b417077",
+      "ad4955fb0ee01dadebea09b7c4b4559f"
+    ],
     "style": {
       "makeup": [
         "bold eyeshadow",
@@ -2508,14 +3150,20 @@
         "statement accessories"
       ],
       "vibe": "Sophisticated and glamorous with a modern touch, balancing elegance with contemporary fashion sensibility."
-    }
+    },
+    "image_paths": [
+      "data/images/세린_사피나즈/03.jpg",
+      "data/images/세린_사피나즈/04.jpg"
+    ]
   },
   {
     "name": "아우렐 헤르만샤",
     "name_en": "Aurel Hermansyah",
     "country": "ID",
     "face_shape": "Round",
-    "face_tokens": [],
+    "face_tokens": [
+      "4b0879517f218e29a3096107bffa633f"
+    ],
     "style": {
       "makeup": [
         "natural glow",
@@ -2539,6 +3187,12 @@
         "high-waisted bottoms"
       ],
       "vibe": "Effortlessly elegant with a modern minimalist approach, balancing sophisticated simplicity with contemporary Indonesian style."
-    }
+    },
+    "image_paths": [
+      "data/images/아우렐_헤르만샤/01.png",
+      "data/images/아우렐_헤르만샤/02.jpg",
+      "data/images/아우렐_헤르만샤/03.jpg",
+      "data/images/아우렐_헤르만샤/04.jpg"
+    ]
   }
 ]

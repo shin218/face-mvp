@@ -123,15 +123,48 @@ async function analyzeWithGemini(imageBytes, imagePath) {
 
 // ── Claude ───────────────────────────────────────────────────────────────────
 
-async function analyzeWithClaude(imageBytes, imagePath) {
+/**
+ * 닮은 연예인 매칭 결과로 system prompt 컨텍스트 블록 생성
+ * @param {Array} matches  - findSimilarCelebrity()가 반환한 matches 배열
+ * @returns {string}
+ */
+function buildCelebrityContext(matches) {
+  if (!matches || matches.length === 0) return '';
+
+  const blocks = matches.map((m) =>
+    `The customer resembles ${m.name_en} (confidence: ${m.confidence}%).
+Reference their signature style as a base:
+Makeup: ${m.style.makeup.join(', ')}
+Hair: ${m.style.hair.join(', ')}
+Outfit: ${m.style.outfit.join(', ')}
+Vibe: ${m.style.vibe}
+Build upon this foundation to suggest the customer's optimal transformation.`
+  );
+
+  return blocks.join('\n\n');
+}
+
+/**
+ * @param {Buffer}  imageBytes
+ * @param {string}  imagePath
+ * @param {Array}   [celebrityMatches]  - findSimilarCelebrity().matches (optional)
+ */
+async function analyzeWithClaude(imageBytes, imagePath, celebrityMatches) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error('ANTHROPIC_API_KEY 미설정');
 
   const { base64, mime } = imageToBase64(imageBytes, imagePath);
 
+  // 연예인 컨텍스트가 있으면 system prompt로 주입
+  const celebrityContext = buildCelebrityContext(celebrityMatches);
+  const systemPrompt = celebrityContext
+    ? `You are a professional fashion stylist and beauty consultant with deep knowledge of celebrity aesthetics.\n\n${celebrityContext}`
+    : 'You are a professional fashion stylist and beauty consultant.';
+
   const body = {
     model:      'claude-sonnet-4-6',
     max_tokens: 512,
+    system:     systemPrompt,
     messages: [
       {
         role: 'user',
