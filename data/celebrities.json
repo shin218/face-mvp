@@ -1,0 +1,2544 @@
+[
+  {
+    "name": "박보영",
+    "name_en": "Park Bo Young",
+    "country": "KR",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "soft brown eyeshadow",
+        "gradient lips",
+        "natural blush",
+        "defined eyebrows"
+      ],
+      "hair": [
+        "long waves",
+        "honey highlights",
+        "center parting",
+        "soft curls",
+        "layered cuts"
+      ],
+      "outfit": [
+        "feminine dresses",
+        "pastel colors",
+        "romantic silhouettes",
+        "elegant blazers",
+        "tailored pieces"
+      ],
+      "vibe": "Soft, sophisticated femininity with a romantic and approachable girl-next-door charm."
+    }
+  },
+  {
+    "name": "아이유",
+    "name_en": "IU (Lee Ji-eun)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "subtle eyeshadow",
+        "dewy skin",
+        "natural flush",
+        "soft contouring"
+      ],
+      "hair": [
+        "long wavy",
+        "side-swept bangs",
+        "honey blonde",
+        "soft curls",
+        "layered lengths"
+      ],
+      "outfit": [
+        "feminine dresses",
+        "vintage-inspired",
+        "pastel colors",
+        "elegant silhouettes",
+        "minimalist chic"
+      ],
+      "vibe": "Ethereal and romantic with a modern minimalist edge, balancing girl-next-door charm with sophisticated elegance."
+    }
+  },
+  {
+    "name": "김고은",
+    "name_en": "Kim Go-eun",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "soft brown eyeshadow",
+        "natural flush",
+        "gradient lips",
+        "defined brows",
+        "dewy finish"
+      ],
+      "hair": [
+        "long waves",
+        "middle part",
+        "warm tones",
+        "layered cuts",
+        "textured volume"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "neutral palette",
+        "tailored silhouettes",
+        "oversized blazers",
+        "luxury basics"
+      ],
+      "vibe": "Effortlessly sophisticated with a timeless, understated elegance that balances modern minimalism with romantic sensibility."
+    }
+  },
+  {
+    "name": "전소미",
+    "name_en": "Jeon So-mi",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold red lips",
+        "defined eyebrows",
+        "smokey eyes",
+        "glowing skin",
+        "graphic eyeliner"
+      ],
+      "hair": [
+        "long straight hair",
+        "dark brunette",
+        "sleek and shiny",
+        "side-swept bangs",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "crop tops",
+        "high-waisted bottoms",
+        "leather jackets",
+        "bold patterns",
+        "statement accessories"
+      ],
+      "vibe": "Confident and edgy with a polished K-pop aesthetic that blends street style coolness with sophisticated glamour."
+    }
+  },
+  {
+    "name": "카리나",
+    "name_en": "Karina (aespa)",
+    "country": "KR",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "glossy lips",
+        "straight eyebrows",
+        "gradient eyeliner",
+        "dewy skin",
+        "subtle blush"
+      ],
+      "hair": [
+        "long straight",
+        "dark brown",
+        "center parting",
+        "sleek finish",
+        "occasional highlights"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "tailored silhouettes",
+        "neutral tones",
+        "high-end casual",
+        "statement accessories"
+      ],
+      "vibe": "Modern, refined elegance with a cool-girl aesthetic that balances minimalism and sophisticated luxury."
+    }
+  },
+  {
+    "name": "윈터",
+    "name_en": "Winter (aespa)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "aegyo-sal",
+        "smudged eyeliner",
+        "dewy skin",
+        "defined eyebrows"
+      ],
+      "hair": [
+        "long straight hair",
+        "black hair",
+        "sleek ponytail",
+        "hair accessories",
+        "two-tone highlights"
+      ],
+      "outfit": [
+        "crop tops",
+        "high-waisted pants",
+        "oversized jackets",
+        "futuristic styling",
+        "coordinated sets"
+      ],
+      "vibe": "Sophisticated yet playful K-pop aesthetic with a perfect balance of elegant minimalism and trendy futuristic edge."
+    }
+  },
+  {
+    "name": "사쿠라",
+    "name_en": "Sakura (LE SSERAFIM)",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "soft gradient lips",
+        "natural glow",
+        "defined eyebrows",
+        "subtle eye makeup",
+        "fresh-faced"
+      ],
+      "hair": [
+        "long straight hair",
+        "center parting",
+        "honey blonde",
+        "sleek styling",
+        "voluminous layers"
+      ],
+      "outfit": [
+        "oversized blazers",
+        "crop tops",
+        "high-waisted bottoms",
+        "clean minimalist pieces",
+        "elegant casual wear"
+      ],
+      "vibe": "effortlessly chic with a balance of girl-next-door freshness and sophisticated modern elegance"
+    }
+  },
+  {
+    "name": "채원",
+    "name_en": "Chaewon (LE SSERAFIM)",
+    "country": "KR",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "soft glowing skin",
+        "natural eyeshadow",
+        "gradient lips",
+        "defined eyebrows",
+        "minimalist approach"
+      ],
+      "hair": [
+        "long silky locks",
+        "center parting",
+        "dark brown tones",
+        "sleek straight",
+        "occasional waves"
+      ],
+      "outfit": [
+        "clean minimalist aesthetic",
+        "tailored pieces",
+        "neutral color palette",
+        "high-end basics",
+        "sophisticated casual"
+      ],
+      "vibe": "Effortlessly elegant with a refined, understated sophistication that balances girl-next-door charm with high-fashion sensibility."
+    }
+  },
+  {
+    "name": "손예진",
+    "name_en": "Son Ye-jin",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "soft natural glow",
+        "gradient lips",
+        "puppy liner",
+        "subtle contouring",
+        "dewy skin"
+      ],
+      "hair": [
+        "long sleek waves",
+        "center parting",
+        "honey blonde highlights",
+        "voluminous layers",
+        "side-swept bangs"
+      ],
+      "outfit": [
+        "tailored blazers",
+        "feminine dresses",
+        "neutral color palette",
+        "luxury accessories",
+        "minimalist chic"
+      ],
+      "vibe": "Elegant and refined with a balance of sophisticated minimalism and soft romantic femininity"
+    }
+  },
+  {
+    "name": "전지현",
+    "name_en": "Jun Ji-hyun",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy-skin",
+        "gradient-lips",
+        "aegyo-sal",
+        "natural-blush",
+        "subtle-eyeshadow"
+      ],
+      "hair": [
+        "long-wavy",
+        "center-parting",
+        "voluminous",
+        "honey-tones",
+        "soft-curls"
+      ],
+      "outfit": [
+        "feminine-dresses",
+        "luxury-brands",
+        "elegant-silhouettes",
+        "neutral-palette",
+        "statement-accessories"
+      ],
+      "vibe": "Sophisticated, ethereal elegance with timeless femininity and refined luxury aesthetic."
+    }
+  },
+  {
+    "name": "김태리",
+    "name_en": "Kim Tae-ri",
+    "country": "KR",
+    "face_shape": "Square",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "soft eyeshadow",
+        "dewy skin",
+        "understated elegance",
+        "natural flush"
+      ],
+      "hair": [
+        "long waves",
+        "center parting",
+        "deep brown",
+        "sleek straight",
+        "voluminous texture"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "neutral tones",
+        "tailored silhouettes",
+        "luxury fabrics",
+        "classic elegance"
+      ],
+      "vibe": "Ethereal sophistication with a modern minimalist approach, blending understated glamour with timeless elegance."
+    }
+  },
+  {
+    "name": "한소희",
+    "name_en": "Han So-hee",
+    "country": "KR",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "puppy liner",
+        "dewy skin",
+        "soft eyeshadow",
+        "natural flush"
+      ],
+      "hair": [
+        "long straight",
+        "dark brunette",
+        "center parting",
+        "sleek waves",
+        "face-framing layers"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "oversized blazers",
+        "leather jackets",
+        "tailored silhouettes",
+        "monochromatic palettes"
+      ],
+      "vibe": "Effortlessly sophisticated with a blend of edgy minimalism and soft femininity, balancing polished elegance with understated cool."
+    }
+  },
+  {
+    "name": "수지",
+    "name_en": "Suzy (Bae Suzy)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "aegyo-sal",
+        "soft brown tones",
+        "dewy skin",
+        "subtle contouring"
+      ],
+      "hair": [
+        "long straight hair",
+        "center parting",
+        "honey blonde highlights",
+        "voluminous waves",
+        "sleek dark roots"
+      ],
+      "outfit": [
+        "feminine dresses",
+        "classic blazers",
+        "neutral color palette",
+        "tailored silhouettes",
+        "luxury minimalism"
+      ],
+      "vibe": "Effortlessly elegant with a sophisticated yet approachable femininity that balances timeless classics with contemporary trends."
+    }
+  },
+  {
+    "name": "제니",
+    "name_en": "Jennie (BLACKPINK)",
+    "country": "KR",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "smokey eyes",
+        "bold lips",
+        "defined brows",
+        "dewy skin",
+        "subtle glitter"
+      ],
+      "hair": [
+        "long straight",
+        "dark brunette",
+        "side parting",
+        "sleek finish",
+        "occasional highlights"
+      ],
+      "outfit": [
+        "oversized blazers",
+        "high-waisted bottoms",
+        "designer brands",
+        "leather jackets",
+        "minimalist chic"
+      ],
+      "vibe": "Effortlessly luxe and edgy with a sophisticated Y2K-inspired minimalism that balances casual cool with high-fashion elegance."
+    }
+  },
+  {
+    "name": "지수",
+    "name_en": "Jisoo (BLACKPINK)",
+    "country": "KR",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "glossy finish",
+        "soft eyeshadow",
+        "defined brows",
+        "natural radiance"
+      ],
+      "hair": [
+        "long silky waves",
+        "center parting",
+        "caramel highlights",
+        "voluminous layers",
+        "sleek straight"
+      ],
+      "outfit": [
+        "high-end luxury brands",
+        "elegant minimalism",
+        "tailored silhouettes",
+        "neutral color palette",
+        "classic sophistication"
+      ],
+      "vibe": "Timeless elegance with a modern luxury aesthetic, blending girl-next-door charm with high-fashion refinement."
+    }
+  },
+  {
+    "name": "아이린",
+    "name_en": "Irene (Red Velvet)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "natural skin",
+        "defined eyebrows",
+        "smokey eyes",
+        "dewy finish"
+      ],
+      "hair": [
+        "long sleek",
+        "center parting",
+        "burgundy tones",
+        "waves",
+        "voluminous"
+      ],
+      "outfit": [
+        "oversized blazers",
+        "minimalist chic",
+        "tailored silhouettes",
+        "neutral palette",
+        "sophisticated basics"
+      ],
+      "vibe": "Elegant and sophisticated with a refined minimalist approach that exudes timeless luxury and understated confidence."
+    }
+  },
+  {
+    "name": "고준희",
+    "name_en": "Ko Jun-hee",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "glossy lips",
+        "defined eyebrows",
+        "natural skin",
+        "soft eye shadow",
+        "gradient blush"
+      ],
+      "hair": [
+        "long wavy",
+        "dark brown",
+        "center parting",
+        "voluminous",
+        "sleek straight"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "neutral tones",
+        "oversized silhouettes",
+        "casual streetwear",
+        "sophisticated basics"
+      ],
+      "vibe": "Modern minimalist elegance with a focus on effortless sophistication and natural beauty."
+    }
+  },
+  {
+    "name": "이성경",
+    "name_en": "Lee Sung-kyung",
+    "country": "KR",
+    "face_shape": "Oblong",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "natural glow",
+        "soft contouring",
+        "gradient lips",
+        "defined eyes"
+      ],
+      "hair": [
+        "long waves",
+        "center parting",
+        "honey highlights",
+        "voluminous texture",
+        "sleek straight"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "oversized blazers",
+        "tailored silhouettes",
+        "neutral tones",
+        "sophisticated casual"
+      ],
+      "vibe": "Modern, effortlessly elegant with a focus on clean lines and natural beauty that balances polished professionalism with approachable femininity."
+    }
+  },
+  {
+    "name": "장원영",
+    "name_en": "Jang Won-young (IVE)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "glowy skin",
+        "gradient lips",
+        "aegyo-sal emphasis",
+        "natural eyeshadow",
+        "straight eyebrows"
+      ],
+      "hair": [
+        "long straight",
+        "silk texture",
+        "dark brown",
+        "center parted",
+        "sleek finish"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "oversized blazer",
+        "tailored silhouettes",
+        "neutral tones",
+        "luxury basics"
+      ],
+      "vibe": "Effortlessly elegant with a polished, girl-next-door sophistication that balances edgy minimalism with subtle glamour."
+    }
+  },
+  {
+    "name": "가을",
+    "name_en": "Gaeul (IVE)",
+    "country": "KR",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft eyeshadow",
+        "gradient lips",
+        "defined brows",
+        "dewy finish"
+      ],
+      "hair": [
+        "long straight",
+        "dark brown",
+        "center parting",
+        "sleek texture",
+        "face-framing layers"
+      ],
+      "outfit": [
+        "minimalist",
+        "oversized silhouettes",
+        "neutral tones",
+        "tailored pieces",
+        "smart casual"
+      ],
+      "vibe": "Elegant and understated sophistication with a preference for timeless, effortlessly polished aesthetics."
+    }
+  },
+  {
+    "name": "설현",
+    "name_en": "Seolhyun (AOA)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "aegyo-sal",
+        "natural eyeshadow",
+        "defined eyebrows",
+        "dewy skin"
+      ],
+      "hair": [
+        "long straight hair",
+        "sleek finish",
+        "dark brown",
+        "side-swept bangs",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "crop tops",
+        "high-waisted bottoms",
+        "feminine silhouettes",
+        "casual chic",
+        "layered looks"
+      ],
+      "vibe": "Seolhyun embodies a sophisticated yet approachable aesthetic with polished femininity, blending girl-crush confidence with timeless elegance."
+    }
+  },
+  {
+    "name": "소희",
+    "name_en": "Sohee (Wonder Girls)",
+    "country": "KR",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "natural blush",
+        "defined eyebrows",
+        "cat-eye liner",
+        "glossy lips"
+      ],
+      "hair": [
+        "long straight hair",
+        "side-swept bangs",
+        "honey blonde highlights",
+        "voluminous waves",
+        "sleek ponytail"
+      ],
+      "outfit": [
+        "form-fitting silhouettes",
+        "mini skirts",
+        "leather jackets",
+        "vintage-inspired pieces",
+        "Y2K aesthetics"
+      ],
+      "vibe": "Elegant and youthful with a blend of girl-crush sophistication and trendy early 2000s charm."
+    }
+  },
+  {
+    "name": "하니",
+    "name_en": "Hanni (NewJeans)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glowing skin",
+        "soft eyeshadow",
+        "peachy blush",
+        "glossy lips",
+        "minimalist approach"
+      ],
+      "hair": [
+        "long straight hair",
+        "center parting",
+        "honey blonde highlights",
+        "sleek texture",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "oversized silhouettes",
+        "vintage-inspired pieces",
+        "low-waisted bottoms",
+        "Y2K references",
+        "preppy casual"
+      ],
+      "vibe": "Effortlessly cool Y2K aesthetic with a fresh, approachable natural beauty that balances vintage-inspired fashion with modern minimalism."
+    }
+  },
+  {
+    "name": "이나영",
+    "name_en": "Lee Na-young",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft eyeshadow",
+        "defined eyebrows",
+        "subtle contouring",
+        "nude lips"
+      ],
+      "hair": [
+        "long waves",
+        "side-swept bangs",
+        "voluminous layers",
+        "caramel highlights",
+        "sleek straight"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "tailored blazers",
+        "classic white shirts",
+        "neutral tones",
+        "minimalist chic"
+      ],
+      "vibe": "Sophisticated, timeless elegance with a focus on natural beauty and refined minimalism."
+    }
+  },
+  {
+    "name": "신민아",
+    "name_en": "Shin Min-a",
+    "country": "KR",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "natural skin",
+        "soft eyeshadow",
+        "defined brows",
+        "subtle contour"
+      ],
+      "hair": [
+        "long waves",
+        "honey blonde",
+        "side-swept bangs",
+        "voluminous texture",
+        "warm tones"
+      ],
+      "outfit": [
+        "oversized blazers",
+        "minimalist chic",
+        "neutral palette",
+        "structured silhouettes",
+        "luxury basics"
+      ],
+      "vibe": "Effortlessly elegant with a sophisticated, girl-next-door charm that balances minimalism with refined polish."
+    }
+  },
+  {
+    "name": "로제",
+    "name_en": "Rosé (BLACKPINK)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "glossy lips",
+        "soft eyeshadow",
+        "defined brows",
+        "dewy skin",
+        "subtle blush"
+      ],
+      "hair": [
+        "long blonde",
+        "sleek straight",
+        "voluminous waves",
+        "platinum blonde",
+        "center part"
+      ],
+      "outfit": [
+        "crop tops",
+        "fitted silhouettes",
+        "neutral tones",
+        "designer pieces",
+        "edgy chic"
+      ],
+      "vibe": "Effortlessly cool and polished with a blend of girl-next-door softness and high-fashion sophistication."
+    }
+  },
+  {
+    "name": "슬기",
+    "name_en": "Seulgi (Red Velvet)",
+    "country": "KR",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold red lips",
+        "sharp eyebrows",
+        "smokey eyes",
+        "gradient lip",
+        "defined cheekbones"
+      ],
+      "hair": [
+        "long wavy hair",
+        "dark brunette",
+        "sleek straight",
+        "voluminous curls",
+        "side-swept bangs"
+      ],
+      "outfit": [
+        "leather jackets",
+        "high-waisted pants",
+        "crop tops",
+        "edgy streetwear",
+        "classic minimalist"
+      ],
+      "vibe": "Seulgi embodies a sophisticated blend of edgy elegance with understated luxury, balancing bold makeup and styling choices with timeless, refined pieces."
+    }
+  },
+  {
+    "name": "예지",
+    "name_en": "Yeji (ITZY)",
+    "country": "KR",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "glossy finish",
+        "soft eye makeup",
+        "natural flush",
+        "defined eyebrows"
+      ],
+      "hair": [
+        "long straight hair",
+        "dark brown to black",
+        "middle part",
+        "sleek texture",
+        "occasional blonde highlights"
+      ],
+      "outfit": [
+        "crop tops",
+        "high-waisted bottoms",
+        "oversized blazers",
+        "fitted silhouettes",
+        "monochromatic looks"
+      ],
+      "vibe": "Effortlessly chic with a balance of edgy sophistication and youthful minimalism, blending casual confidence with polished elegance."
+    }
+  },
+  {
+    "name": "문가영",
+    "name_en": "Moon Ga-young",
+    "country": "KR",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient lips",
+        "soft eyeshadow",
+        "subtle blush",
+        "natural glow",
+        "defined brows"
+      ],
+      "hair": [
+        "long straight hair",
+        "center parting",
+        "honey blonde highlights",
+        "voluminous waves",
+        "sleek styling"
+      ],
+      "outfit": [
+        "tailored blazers",
+        "elegant dresses",
+        "minimalist chic",
+        "pastel tones",
+        "high-waisted bottoms"
+      ],
+      "vibe": "sophisticated minimalist elegance with a feminine, polished everyday luxury aesthetic"
+    }
+  },
+  {
+    "name": "김유정",
+    "name_en": "Kim Yoo-jung",
+    "country": "KR",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "soft natural glow",
+        "subtle eyeshadow",
+        "defined eyebrows",
+        "nude lip tones",
+        "fresh dewy finish"
+      ],
+      "hair": [
+        "long straight hair",
+        "side-swept bangs",
+        "honey blonde highlights",
+        "sleek silhouette",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "oversized blazers",
+        "refined casual wear",
+        "neutral color palette",
+        "minimalist chic"
+      ],
+      "vibe": "Effortlessly elegant with a fresh, youthful sophistication that balances girl-next-door charm with polished luxury."
+    }
+  },
+  {
+    "name": "혜인",
+    "name_en": "Hyein (NewJeans)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural skin tone",
+        "soft eyeshadow",
+        "glossy lips",
+        "subtle blush",
+        "minimalist"
+      ],
+      "hair": [
+        "straight long hair",
+        "center parting",
+        "sleek texture",
+        "dark brown",
+        "layered bangs"
+      ],
+      "outfit": [
+        "oversized blazers",
+        "vintage-inspired pieces",
+        "baggy silhouettes",
+        "neutral colors",
+        "Y2K elements"
+      ],
+      "vibe": "Fresh, youthful, and effortlessly cool with a blend of Y2K nostalgia and modern minimalism."
+    }
+  },
+  {
+    "name": "민지",
+    "name_en": "Minji (NewJeans)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "clean-girl",
+        "natural-flush",
+        "glossy-lips",
+        "subtle-eyeshadow",
+        "minimalist"
+      ],
+      "hair": [
+        "long-straight",
+        "middle-part",
+        "sleek",
+        "dark-brown",
+        "healthy-shine"
+      ],
+      "outfit": [
+        "preppy",
+        "Y2K-inspired",
+        "oversized-silhouettes",
+        "vintage-denim",
+        "school-uniform-aesthetic"
+      ],
+      "vibe": "Fresh, effortless, and girl-next-door elegance with a nostalgic Y2K preppy edge"
+    }
+  },
+  {
+    "name": "리아",
+    "name_en": "Lia (ITZY)",
+    "country": "KR",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "natural flush",
+        "defined eyebrows",
+        "soft eyeshadow",
+        "glossy lips"
+      ],
+      "hair": [
+        "long straight hair",
+        "sleek styling",
+        "dark brunette",
+        "center parting",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "oversized silhouettes",
+        "neutral tones",
+        "casual streetwear",
+        "tailored pieces"
+      ],
+      "vibe": "effortlessly elegant with a modern, understated approach to fashion that balances girl-crush energy with polished sophistication."
+    }
+  },
+  {
+    "name": "유나",
+    "name_en": "Yuna (ITZY)",
+    "country": "KR",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural-glowing",
+        "gradient-lips",
+        "aegyo-sal",
+        "soft-eyeshadow",
+        "defined-brows"
+      ],
+      "hair": [
+        "long-straight",
+        "side-parting",
+        "honey-blonde",
+        "voluminous",
+        "sleek"
+      ],
+      "outfit": [
+        "crop-tops",
+        "high-waisted-bottoms",
+        "oversized-jackets",
+        "minimalist-chic",
+        "streetwear-inspired"
+      ],
+      "vibe": "Fresh, youthful elegance blending sophisticated minimalism with playful K-pop edge and effortless cool-girl aesthetics."
+    }
+  },
+  {
+    "name": "키타가와 케이코",
+    "name_en": "Keiko Kitagawa",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "defined eyebrows",
+        "subtle smokey eyes",
+        "berry lips",
+        "luminous skin"
+      ],
+      "hair": [
+        "long black hair",
+        "straight silhouette",
+        "center parting",
+        "sleek finish",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "tailored blazers",
+        "elegant dresses",
+        "classic minimalism",
+        "designer brands",
+        "refined sophistication"
+      ],
+      "vibe": "Timeless Japanese elegance with understated luxury and polished minimalist sensibility."
+    }
+  },
+  {
+    "name": "혼다 미나코",
+    "name_en": "Minako Honda",
+    "country": "JP",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold eyeshadow",
+        "defined eyebrows",
+        "glossy lips",
+        "dramatic eyeliner",
+        "shimmering highlights"
+      ],
+      "hair": [
+        "long straight hair",
+        "voluminous waves",
+        "center parting",
+        "sleek and shiny",
+        "dark brown tones"
+      ],
+      "outfit": [
+        "feminine dresses",
+        "elegant gowns",
+        "layered styling",
+        "classic silhouettes",
+        "sophisticated accessories"
+      ],
+      "vibe": "Timeless elegance with a touch of glamorous sophistication and feminine grace."
+    }
+  },
+  {
+    "name": "나카야마 미호",
+    "name_en": "Miho Nakayama",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold eyeshadow",
+        "defined eyeliner",
+        "glossy lips",
+        "dramatic eye makeup",
+        "luminous skin"
+      ],
+      "hair": [
+        "voluminous waves",
+        "feathered layers",
+        "dark brunette",
+        "80s volume",
+        "soft curls"
+      ],
+      "outfit": [
+        "designer fashion",
+        "elegant dresses",
+        "tailored silhouettes",
+        "luxury brands",
+        "sophisticated pieces"
+      ],
+      "vibe": "Glamorous 80s-90s elegance with bold makeup and voluminous hair, embodying sophisticated Japanese beauty standards."
+    }
+  },
+  {
+    "name": "마츠이 쥬리나",
+    "name_en": "Jurina Matsui",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "gradient eyeshadow",
+        "aegyo-sal",
+        "glossy lips",
+        "defined eyebrows",
+        "natural flush"
+      ],
+      "hair": [
+        "long straight hair",
+        "side-swept bangs",
+        "layered cuts",
+        "brunette tones",
+        "sleek finish"
+      ],
+      "outfit": [
+        "school uniform aesthetics",
+        "cute casual wear",
+        "pastel colors",
+        "oversized sweaters",
+        "pleated skirts"
+      ],
+      "vibe": "Youthful, innocent charm with a balance of girl-next-door appeal and polished idol elegance."
+    }
+  },
+  {
+    "name": "아야세 하루카",
+    "name_en": "Haruka Ayase",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural",
+        "dewy skin",
+        "soft brown eyeshadow",
+        "defined brows",
+        "minimal contouring"
+      ],
+      "hair": [
+        "long straight",
+        "middle part",
+        "dark brown",
+        "sleek",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "minimalist",
+        "tailored silhouettes",
+        "neutral tones",
+        "elegant dresses",
+        "sophisticated casual"
+      ],
+      "vibe": "Effortlessly elegant with a refined, understated sophistication that balances natural beauty with polished minimalism."
+    }
+  },
+  {
+    "name": "이시하라 사토미",
+    "name_en": "Satomi Ishihara",
+    "country": "JP",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural",
+        "dewy skin",
+        "soft eyeshadow",
+        "defined brows",
+        "nude lips"
+      ],
+      "hair": [
+        "long straight",
+        "dark brunette",
+        "sleek",
+        "side-parted",
+        "voluminous"
+      ],
+      "outfit": [
+        "minimalist",
+        "elegant",
+        "tailored silhouettes",
+        "neutral tones",
+        "sophisticated casual"
+      ],
+      "vibe": "Effortlessly refined with a polished yet approachable elegance that balances modern minimalism with timeless Japanese sophistication."
+    }
+  },
+  {
+    "name": "미야자키 아오이",
+    "name_en": "Aoi Miyazaki",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "minimal",
+        "natural",
+        "dewy skin",
+        "soft eyeshadow",
+        "subtle lips"
+      ],
+      "hair": [
+        "long waves",
+        "side-parted",
+        "dark brunette",
+        "flowing",
+        "romantic layers"
+      ],
+      "outfit": [
+        "elegant simplicity",
+        "neutral palette",
+        "tailored silhouettes",
+        "understated luxury",
+        "classic pieces"
+      ],
+      "vibe": "Effortlessly sophisticated with a quiet, ethereal elegance that prioritizes natural beauty and timeless refinement."
+    }
+  },
+  {
+    "name": "나가사와 마사미",
+    "name_en": "Masami Nagasawa",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "defined eyebrows",
+        "subtle contouring",
+        "nude lips",
+        "dewy skin"
+      ],
+      "hair": [
+        "long straight",
+        "center parting",
+        "sleek finish",
+        "dark brown",
+        "silky texture"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "neutral tones",
+        "tailored silhouettes",
+        "designer brands",
+        "sophisticated elegance"
+      ],
+      "vibe": "Effortlessly refined with a focus on understated elegance and timeless Japanese beauty standards."
+    }
+  },
+  {
+    "name": "야마다 유",
+    "name_en": "Yu Yamada",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural",
+        "dewy skin",
+        "subtle contouring",
+        "soft eyeshadow",
+        "glossy lips"
+      ],
+      "hair": [
+        "long straight",
+        "dark brunette",
+        "center parted",
+        "sleek",
+        "voluminous"
+      ],
+      "outfit": [
+        "minimalist",
+        "neutral tones",
+        "clean lines",
+        "casual chic",
+        "layered"
+      ],
+      "vibe": "Modern minimalist with an effortless, approachable elegance that balances sophistication with everyday wearability."
+    }
+  },
+  {
+    "name": "후쿠다 마유코",
+    "name_en": "Mayuko Fukuda",
+    "country": "JP",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural skin",
+        "defined eyebrows",
+        "soft blush",
+        "neutral tones",
+        "glossy lips"
+      ],
+      "hair": [
+        "long waves",
+        "honey blonde highlights",
+        "voluminous texture",
+        "side-swept bangs",
+        "effortless layers"
+      ],
+      "outfit": [
+        "oversized blazers",
+        "vintage denim",
+        "minimalist aesthetic",
+        "neutral color palette",
+        "casual-chic"
+      ],
+      "vibe": "Effortlessly cool and understated Japanese-inspired minimalism with a touch of retro-vintage charm."
+    }
+  },
+  {
+    "name": "마츠다 세이코",
+    "name_en": "Seiko Matsuda",
+    "country": "JP",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "soft natural blush",
+        "defined eyebrows",
+        "subtle eyeshadow",
+        "dewy skin",
+        "neutral lipstick"
+      ],
+      "hair": [
+        "long straight hair",
+        "center parting",
+        "sleek and glossy",
+        "voluminous waves",
+        "jet black color"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "classic tailoring",
+        "modest necklines",
+        "timeless pieces",
+        "refined femininity"
+      ],
+      "vibe": "Timeless Japanese elegance with a graceful, sophisticated aesthetic that emphasizes natural beauty and understated luxury."
+    }
+  },
+  {
+    "name": "니시노 나나세",
+    "name_en": "Nanase Nishino",
+    "country": "JP",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft brown eyeshadow",
+        "defined eyebrows",
+        "nude lipstick",
+        "dewy complexion"
+      ],
+      "hair": [
+        "long straight",
+        "center parting",
+        "sleek and shiny",
+        "dark brown",
+        "layered"
+      ],
+      "outfit": [
+        "elegant minimalism",
+        "neutral tones",
+        "tailored blazers",
+        "white basics",
+        "sophisticated casual"
+      ],
+      "vibe": "Clean, elegant Japanese girl-next-door aesthetic with understated sophistication and timeless appeal."
+    }
+  },
+  {
+    "name": "요시오카 리호",
+    "name_en": "Riho Yoshioka",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "soft natural glow",
+        "gradient lips",
+        "aegyo-sal emphasis",
+        "subtle eyeshadow",
+        "dewy skin"
+      ],
+      "hair": [
+        "long straight",
+        "center part",
+        "glossy finish",
+        "dark brunette",
+        "effortless waves"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "pastel colors",
+        "oversized silhouettes",
+        "feminine pieces",
+        "contemporary casual"
+      ],
+      "vibe": "Modern Japanese elegance with a soft, approachable sensibility and contemporary minimalist aesthetic."
+    }
+  },
+  {
+    "name": "하마베 미나미",
+    "name_en": "Minami Hamabe",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft brown eyeshadow",
+        "defined eyebrows",
+        "nude lipstick",
+        "subtle blush"
+      ],
+      "hair": [
+        "long straight",
+        "dark brown",
+        "layered bangs",
+        "sleek finish",
+        "side-swept"
+      ],
+      "outfit": [
+        "casual chic",
+        "oversized blazers",
+        "minimalist aesthetic",
+        "neutral tones",
+        "denim"
+      ],
+      "vibe": "Clean, effortless minimalism with a sophisticated yet approachable Japanese beauty sensibility."
+    }
+  },
+  {
+    "name": "히로세 스즈",
+    "name_en": "Suzu Hirose",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glowing skin",
+        "soft eyeshadow",
+        "defined eyebrows",
+        "subtle lip tint",
+        "dewy finish"
+      ],
+      "hair": [
+        "long straight hair",
+        "center parting",
+        "sleek and polished",
+        "dark brunette",
+        "layered ends"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "tailored silhouettes",
+        "neutral color palette",
+        "contemporary fashion",
+        "effortless elegance"
+      ],
+      "vibe": "Modern, understated sophistication with an emphasis on natural beauty and refined, clean-lined style."
+    }
+  },
+  {
+    "name": "아리무라 카스미",
+    "name_en": "Kasumi Arimura",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "natural flush",
+        "gradient lips",
+        "soft eyeshadow",
+        "defined brows"
+      ],
+      "hair": [
+        "long waves",
+        "voluminous texture",
+        "center parting",
+        "honey highlights",
+        "flowing layers"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "neutral tones",
+        "tailored silhouettes",
+        "luxury basics",
+        "elegant simplicity"
+      ],
+      "vibe": "Effortlessly sophisticated with a focus on natural beauty, clean lines, and understated luxury."
+    }
+  },
+  {
+    "name": "쿠로키 하루",
+    "name_en": "Haru Kuroki",
+    "country": "JP",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft eyeshadow",
+        "defined brows",
+        "subtle blush",
+        "nude lips"
+      ],
+      "hair": [
+        "long and flowing",
+        "center parted",
+        "dark brunette",
+        "sleek finish",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "neutral tones",
+        "tailored silhouettes",
+        "layered basics",
+        "elegant simplicity"
+      ],
+      "vibe": "Effortlessly sophisticated with a focus on natural beauty and understated elegance that exudes quiet confidence."
+    }
+  },
+  {
+    "name": "쿠도 하루카",
+    "name_en": "Haruka Kudo",
+    "country": "JP",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft brown eyeshadow",
+        "defined eyebrows",
+        "subtle blush",
+        "nude lips"
+      ],
+      "hair": [
+        "long straight hair",
+        "center parting",
+        "dark brown",
+        "sleek finish",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "neutral tones",
+        "tailored silhouettes",
+        "elegant simplicity",
+        "contemporary basics"
+      ],
+      "vibe": "Modern minimalist with an understated elegance and girl-next-door sophistication."
+    }
+  },
+  {
+    "name": "타베 미카코",
+    "name_en": "Mikako Tabe",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "defined eyebrows",
+        "soft eye shadow",
+        "subtle blush",
+        "nude lips"
+      ],
+      "hair": [
+        "sleek straight",
+        "middle part",
+        "shoulder-length",
+        "glossy texture",
+        "dark brown"
+      ],
+      "outfit": [
+        "minimalist",
+        "monochromatic",
+        "tailored silhouettes",
+        "elegant basics",
+        "neutral palette"
+      ],
+      "vibe": "understated elegance with a focus on refined simplicity and natural beauty."
+    }
+  },
+  {
+    "name": "나카조 아야미",
+    "name_en": "Ayami Nakajo",
+    "country": "JP",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "subtle eyeshadow",
+        "natural blush",
+        "soft eyeliner",
+        "glossy lips"
+      ],
+      "hair": [
+        "long and straight",
+        "center parting",
+        "sleek",
+        "dark brown",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "minimalist chic",
+        "high-fashion",
+        "neutral tones",
+        "feminine silhouettes"
+      ],
+      "vibe": "Modern, sophisticated elegance with a fresh, understated beauty that balances femininity with contemporary minimalism."
+    }
+  },
+  {
+    "name": "양자경",
+    "name_en": "Michelle Yeoh",
+    "country": "MY",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold red lips",
+        "defined eyebrows",
+        "smokey eyes",
+        "minimal foundation",
+        "dramatic liner"
+      ],
+      "hair": [
+        "sleek straight",
+        "low buns",
+        "voluminous waves",
+        "dark glossy",
+        "elegant updos"
+      ],
+      "outfit": [
+        "tailored blazers",
+        "elegant gowns",
+        "martial arts wear",
+        "luxury designer",
+        "monochromatic"
+      ],
+      "vibe": "Sophisticated, powerful elegance blending timeless femininity with commanding presence and refined luxury."
+    }
+  },
+  {
+    "name": "탕웨이",
+    "name_en": "Tang Wei",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft eyeshadow",
+        "defined eyes",
+        "nude lips",
+        "minimalist approach"
+      ],
+      "hair": [
+        "sleek straight",
+        "center parting",
+        "voluminous waves",
+        "dark brunette",
+        "polished finish"
+      ],
+      "outfit": [
+        "tailored silhouettes",
+        "neutral tones",
+        "elegant simplicity",
+        "designer pieces",
+        "understated luxury"
+      ],
+      "vibe": "Sophisticated minimalism with an emphasis on refined elegance and timeless, polished beauty."
+    }
+  },
+  {
+    "name": "류이페이",
+    "name_en": "Liu Yifei",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural-glowing",
+        "soft-eyeshadow",
+        "defined-eyebrows",
+        "nude-lips",
+        "luminous-skin"
+      ],
+      "hair": [
+        "long-flowing",
+        "center-parted",
+        "silky-straight",
+        "dark-brunette",
+        "voluminous"
+      ],
+      "outfit": [
+        "elegant-dresses",
+        "flowing-gowns",
+        "minimalist-chic",
+        "high-fashion",
+        "delicate-fabrics"
+      ],
+      "vibe": "ethereal elegance with timeless sophistication and understated glamour"
+    }
+  },
+  {
+    "name": "구력나자",
+    "name_en": "Dilraba Dilmurat",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy-skin",
+        "gradient-lips",
+        "subtle-blush",
+        "defined-brows",
+        "glossy-finish"
+      ],
+      "hair": [
+        "long-waves",
+        "center-parting",
+        "voluminous",
+        "side-swept-bangs",
+        "jet-black"
+      ],
+      "outfit": [
+        "elegant-dresses",
+        "tailored-blazers",
+        "high-fashion",
+        "minimalist-chic",
+        "luxury-brands"
+      ],
+      "vibe": "Modern sophistication with a balance of ethereal femininity and polished luxury elegance."
+    }
+  },
+  {
+    "name": "정상",
+    "name_en": "Zheng Shuang",
+    "country": "CN",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "gradient lips",
+        "soft eyeshadow",
+        "natural glow",
+        "defined brows"
+      ],
+      "hair": [
+        "long waves",
+        "dark brunette",
+        "center parting",
+        "voluminous",
+        "glossy texture"
+      ],
+      "outfit": [
+        "feminine dresses",
+        "pastel colors",
+        "luxe fabrics",
+        "romantic silhouettes",
+        "elegant accessories"
+      ],
+      "vibe": "Ethereal and romantic with a polished, girl-next-door elegance that balances sophistication with youthful charm."
+    }
+  },
+  {
+    "name": "판빙빙",
+    "name_en": "Fan Bingbing",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold red lips",
+        "defined eyebrows",
+        "dramatic eyeliner",
+        "luminous skin",
+        "contoured cheekbones"
+      ],
+      "hair": [
+        "voluminous waves",
+        "sleek straight",
+        "center parting",
+        "glossy finish",
+        "elegant updos"
+      ],
+      "outfit": [
+        "haute couture gowns",
+        "form-fitting silhouettes",
+        "luxury brands",
+        "dramatic statement pieces",
+        "jewel tones"
+      ],
+      "vibe": "Glamorous sophistication with bold confidence, blending Eastern elegance with Western red carpet drama."
+    }
+  },
+  {
+    "name": "리빙빙",
+    "name_en": "Li Bingbing",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold red lips",
+        "dramatic smoky eyes",
+        "defined eyebrows",
+        "porcelain complexion",
+        "winged eyeliner"
+      ],
+      "hair": [
+        "sleek straight",
+        "voluminous waves",
+        "dark brunette",
+        "side-parted",
+        "polished blowout"
+      ],
+      "outfit": [
+        "tailored blazers",
+        "form-fitting dresses",
+        "elegant gowns",
+        "luxury minimalism",
+        "statement pieces"
+      ],
+      "vibe": "Sophisticated and glamorous with a modern edge, balancing powerful femininity with understated elegance."
+    }
+  },
+  {
+    "name": "왕페이",
+    "name_en": "Faye Wong",
+    "country": "CN",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold red lips",
+        "dramatic eyeliner",
+        "porcelain skin",
+        "defined eyebrows",
+        "minimalist yet striking"
+      ],
+      "hair": [
+        "sleek bob cut",
+        "straight black hair",
+        "blunt bangs",
+        "asymmetrical styles",
+        "futuristic cuts"
+      ],
+      "outfit": [
+        "leather jackets",
+        "minimalist silhouettes",
+        "avant-garde fashion",
+        "androgynous styling",
+        "high-fashion couture"
+      ],
+      "vibe": "Faye Wong embodies a bold, avant-garde aesthetic that blends minimalism with theatrical drama, establishing herself as an iconic trendsetter who defies conventional beauty standards."
+    }
+  },
+  {
+    "name": "장쯔이",
+    "name_en": "Zhang Ziyi",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold red lips",
+        "defined eyebrows",
+        "smoky eyes",
+        "dewy skin",
+        "sophisticated neutral"
+      ],
+      "hair": [
+        "sleek straight",
+        "voluminous waves",
+        "center parting",
+        "long flowing",
+        "polished blowout"
+      ],
+      "outfit": [
+        "haute couture gowns",
+        "elegant minimalist",
+        "statement jewelry",
+        "tailored silhouettes",
+        "luxury fabrics"
+      ],
+      "vibe": "Timeless sophistication with a balance of modern elegance and classic Hollywood glamour."
+    }
+  },
+  {
+    "name": "공리",
+    "name_en": "Gong Li",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold red lips",
+        "defined eyebrows",
+        "smoky eyes",
+        "porcelain skin",
+        "dramatic winged eyeliner"
+      ],
+      "hair": [
+        "sleek black",
+        "voluminous waves",
+        "center parting",
+        "glossy finish",
+        "vintage curls"
+      ],
+      "outfit": [
+        "elegant cheongsam",
+        "tailored silhouettes",
+        "luxe fabrics",
+        "statement jewelry",
+        "timeless pieces"
+      ],
+      "vibe": "Timeless elegance blending classic Chinese aesthetics with refined, sophisticated international glamour."
+    }
+  },
+  {
+    "name": "양미",
+    "name_en": "Yang Mi",
+    "country": "CN",
+    "face_shape": "Heart",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "cat-eye liner",
+        "subtle contouring",
+        "natural flush",
+        "gradient lips",
+        "defined brows"
+      ],
+      "hair": [
+        "long straight hair",
+        "side-swept bangs",
+        "voluminous waves",
+        "dark brunette",
+        "layered cuts"
+      ],
+      "outfit": [
+        "elegant minimalism",
+        "high-waisted silhouettes",
+        "monochrome palettes",
+        "luxury brands",
+        "structured tailoring"
+      ],
+      "vibe": "Sophisticated and ethereal with a modern minimalist approach that balances timeless elegance with contemporary edge."
+    }
+  },
+  {
+    "name": "가오위안위안",
+    "name_en": "Gao Yuanyuan",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft eyeshadow",
+        "defined brows",
+        "nude lips",
+        "dewy complexion"
+      ],
+      "hair": [
+        "long waves",
+        "side-swept bangs",
+        "glossy finish",
+        "layered cuts",
+        "warm tones"
+      ],
+      "outfit": [
+        "minimalist elegance",
+        "tailored silhouettes",
+        "neutral palette",
+        "classic dresses",
+        "luxury fabrics"
+      ],
+      "vibe": "Effortlessly sophisticated with a refined, understated elegance that balances timeless glamour with modern minimalism."
+    }
+  },
+  {
+    "name": "린쯔링",
+    "name_en": "Lin Chi-ling",
+    "country": "TW",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "flawless complexion",
+        "defined eyebrows",
+        "smokey eye",
+        "nude lips",
+        "luminous glow"
+      ],
+      "hair": [
+        "long and sleek",
+        "center parting",
+        "voluminous waves",
+        "black or dark brown",
+        "glossy finish"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "tailored silhouettes",
+        "neutral colors",
+        "high-end designer",
+        "sophisticated minimalism"
+      ],
+      "vibe": "Timeless elegance with polished sophistication and effortless glamour that transcends trends."
+    }
+  },
+  {
+    "name": "서기",
+    "name_en": "Shu Qi",
+    "country": "TW",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "defined eyebrows",
+        "smokey eyes",
+        "nude lips",
+        "porcelain complexion"
+      ],
+      "hair": [
+        "long wavy",
+        "shoulder-length layers",
+        "dark brunette",
+        "side-swept bangs",
+        "voluminous texture"
+      ],
+      "outfit": [
+        "elegant minimalism",
+        "tailored silhouettes",
+        "neutral color palette",
+        "luxe fabrics",
+        "understated luxury"
+      ],
+      "vibe": "Effortlessly sophisticated with a timeless elegance that balances sensuality and refined restraint."
+    }
+  },
+  {
+    "name": "오우양나나",
+    "name_en": "Ouyang Nana",
+    "country": "TW",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft eyeshadow",
+        "defined eyebrows",
+        "gradient lips",
+        "dewy complexion"
+      ],
+      "hair": [
+        "long straight hair",
+        "center parting",
+        "glossy finish",
+        "layered lengths",
+        "dark brown tones"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "oversized silhouettes",
+        "neutral color palette",
+        "luxury basics",
+        "tailored pieces"
+      ],
+      "vibe": "effortlessly elegant with a clean, understated sophistication that balances youthful freshness with refined minimalism."
+    }
+  },
+  {
+    "name": "왕쯔원",
+    "name_en": "Wang Ziwen",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "defined eyebrows",
+        "soft eye shadow",
+        "subtle contouring",
+        "classic red lips"
+      ],
+      "hair": [
+        "long straight",
+        "side-parted",
+        "sleek and shiny",
+        "voluminous waves",
+        "dark brunette"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "tailored silhouettes",
+        "neutral tones",
+        "luxury fabrics",
+        "sophisticated minimalism"
+      ],
+      "vibe": "Timeless elegance with refined sophistication and understated glamour, embodying modern classic beauty."
+    }
+  },
+  {
+    "name": "조려영",
+    "name_en": "Zhao Liying",
+    "country": "CN",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "defined eyebrows",
+        "soft eye shadow",
+        "peachy tones",
+        "dewy finish"
+      ],
+      "hair": [
+        "long waves",
+        "center parting",
+        "voluminous layers",
+        "dark brunette",
+        "soft curls"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "minimalist chic",
+        "pastel colors",
+        "tailored silhouettes",
+        "delicate fabrics"
+      ],
+      "vibe": "Timeless elegance with a soft, feminine grace that balances traditional beauty with modern sophistication."
+    }
+  },
+  {
+    "name": "장혜문",
+    "name_en": "Zhang Huiwen",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "subtle contouring",
+        "natural blush",
+        "nude lips",
+        "defined eyes"
+      ],
+      "hair": [
+        "long straight",
+        "center parting",
+        "sleek",
+        "dark brunette",
+        "glossy"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "tailored pieces",
+        "neutral tones",
+        "elegant dresses",
+        "sophisticated silhouettes"
+      ],
+      "vibe": "Effortlessly elegant with a refined, understated luxe aesthetic that balances minimalism with timeless sophistication."
+    }
+  },
+  {
+    "name": "진의함",
+    "name_en": "Jin Yihan",
+    "country": "CN",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural",
+        "dewy skin",
+        "subtle contouring",
+        "nude lips",
+        "gradient eyeshadow"
+      ],
+      "hair": [
+        "long waves",
+        "dark brunette",
+        "side-swept bangs",
+        "voluminous layers",
+        "glossy finish"
+      ],
+      "outfit": [
+        "minimalist chic",
+        "neutral tones",
+        "tailored silhouettes",
+        "elegant dresses",
+        "sophisticated basics"
+      ],
+      "vibe": "Effortlessly elegant with a refined, understated luxury aesthetic that balances minimalism with subtle femininity."
+    }
+  },
+  {
+    "name": "리사",
+    "name_en": "Lisa (BLACKPINK)",
+    "country": "TH",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold graphic eyeliner",
+        "gradient lips",
+        "glass skin",
+        "defined eyebrows",
+        "minimalist yet striking"
+      ],
+      "hair": [
+        "long straight hair",
+        "blonde highlights",
+        "sleek and polished",
+        "side-swept bangs",
+        "voluminous waves"
+      ],
+      "outfit": [
+        "oversized blazers",
+        "high-waisted bottoms",
+        "luxury streetwear",
+        "statement accessories",
+        "tailored silhouettes"
+      ],
+      "vibe": "Effortlessly luxe with a perfect blend of edgy minimalism and bold statement pieces that exude confident sophistication."
+    }
+  },
+  {
+    "name": "니타야 나웃차",
+    "name_en": "Nuttaa Nutcha Sukonthaman",
+    "country": "TH",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "soft eyeshadow",
+        "defined brows",
+        "subtle contouring",
+        "nude lips"
+      ],
+      "hair": [
+        "long waves",
+        "dark brunette",
+        "center parting",
+        "voluminous layers",
+        "sleek finish"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "minimalist chic",
+        "neutral tones",
+        "tailored silhouettes",
+        "sophisticated layers"
+      ],
+      "vibe": "Modern Thai elegance with a refined, understated luxury aesthetic that balances sophistication with natural beauty."
+    }
+  },
+  {
+    "name": "라리사 마노반",
+    "name_en": "Lalisa Manoban",
+    "country": "TH",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold-eyeliner",
+        "gradient-lips",
+        "glowing-skin",
+        "statement-eyeshadow",
+        "defined-brows"
+      ],
+      "hair": [
+        "long-straight",
+        "blonde-highlights",
+        "sleek-finish",
+        "colored-tips",
+        "voluminous-texture"
+      ],
+      "outfit": [
+        "oversized-silhouettes",
+        "designer-brands",
+        "streetwear-edge",
+        "leather-jackets",
+        "bold-accessories"
+      ],
+      "vibe": "Edgy luxury meets confident street style with a bold, modern Asian-inspired aesthetic that commands attention."
+    }
+  },
+  {
+    "name": "디타 폰티스",
+    "name_en": "Dita Von Teese",
+    "country": "ID",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "red lips",
+        "dramatic winged eyeliner",
+        "pale complexion",
+        "defined eyebrows",
+        "bold cat-eye"
+      ],
+      "hair": [
+        "victory rolls",
+        "black hair",
+        "vintage waves",
+        "pin-up curls",
+        "sleek styles"
+      ],
+      "outfit": [
+        "corsets",
+        "burlesque wear",
+        "vintage lingerie",
+        "structured silhouettes",
+        "retro elegance"
+      ],
+      "vibe": "Classic 1950s burlesque glamour with theatrical sophistication and timeless vintage allure."
+    }
+  },
+  {
+    "name": "하트 에반젤리스타",
+    "name_en": "Heart Evangelista",
+    "country": "PH",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold eyeshadow",
+        "dramatic eyeliner",
+        "full coverage foundation",
+        "sculpted contours",
+        "glossy lips"
+      ],
+      "hair": [
+        "voluminous waves",
+        "sleek straight",
+        "long length",
+        "brunette tones",
+        "styled bangs"
+      ],
+      "outfit": [
+        "luxury designer brands",
+        "fitted silhouettes",
+        "statement accessories",
+        "elegant dresses",
+        "high-end fashion"
+      ],
+      "vibe": "Sophisticated Filipino fashionista with a love for luxury, glamorous details, and polished high-fashion aesthetics."
+    }
+  },
+  {
+    "name": "나딘 루스트레",
+    "name_en": "Nadine Lustre",
+    "country": "PH",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "dewy skin",
+        "natural glow",
+        "soft eyeshadow",
+        "defined brows",
+        "nude lips"
+      ],
+      "hair": [
+        "long waves",
+        "center part",
+        "honey tones",
+        "voluminous",
+        "effortless layers"
+      ],
+      "outfit": [
+        "casual chic",
+        "minimalist pieces",
+        "neutral tones",
+        "oversized silhouettes",
+        "athleisure"
+      ],
+      "vibe": "Fresh, approachable girl-next-door with a subtle luxe touch and effortless modern elegance."
+    }
+  },
+  {
+    "name": "메이 무라사키",
+    "name_en": "May Murasaki",
+    "country": "TH",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold eye makeup",
+        "dark smokey eyes",
+        "defined eyebrows",
+        "dramatic eyeliner",
+        "glossy lips"
+      ],
+      "hair": [
+        "long flowing hair",
+        "dark brunette",
+        "voluminous waves",
+        "sleek straight styles",
+        "center parting"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "fitted silhouettes",
+        "dark colors",
+        "sophisticated basics",
+        "statement accessories"
+      ],
+      "vibe": "Modern sophistication with a touch of dramatic elegance and contemporary Japanese sensibility."
+    }
+  },
+  {
+    "name": "세린 사피나즈",
+    "name_en": "Sherin Sapinaz",
+    "country": "MY",
+    "face_shape": "Oval",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "bold eyeshadow",
+        "defined winged eyeliner",
+        "warm bronze tones",
+        "dewy skin",
+        "statement lips"
+      ],
+      "hair": [
+        "long flowing waves",
+        "voluminous texture",
+        "dark brunette",
+        "side-swept bangs",
+        "glossy finish"
+      ],
+      "outfit": [
+        "elegant dresses",
+        "fitted silhouettes",
+        "neutral color palette",
+        "luxury fabrics",
+        "statement accessories"
+      ],
+      "vibe": "Sophisticated and glamorous with a modern touch, balancing elegance with contemporary fashion sensibility."
+    }
+  },
+  {
+    "name": "아우렐 헤르만샤",
+    "name_en": "Aurel Hermansyah",
+    "country": "ID",
+    "face_shape": "Round",
+    "face_tokens": [],
+    "style": {
+      "makeup": [
+        "natural glow",
+        "defined eyebrows",
+        "warm earth tones",
+        "subtle contouring",
+        "glossy lips"
+      ],
+      "hair": [
+        "long flowing",
+        "layered waves",
+        "dark brunette",
+        "voluminous texture",
+        "side-swept bangs"
+      ],
+      "outfit": [
+        "casual chic",
+        "oversized blazers",
+        "neutral colors",
+        "designer basics",
+        "high-waisted bottoms"
+      ],
+      "vibe": "Effortlessly elegant with a modern minimalist approach, balancing sophisticated simplicity with contemporary Indonesian style."
+    }
+  }
+]
