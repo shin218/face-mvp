@@ -15,3 +15,7 @@ opencv-python>=4.8.0
 Pillow>=10.0.0
 numpy>=1.24.0
 requests>=2.28.0
+
+# compare_landmarks.py: MediaPipe vs Face++ 비교
+mediapipe>=0.10.0
+python-dotenv>=1.0.0

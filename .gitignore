@@ -9,3 +9,7 @@ application.yml
 python/*.pth
 gradle-dist/
 data/images/
+bin/
+.claude/
+test/
+output/

@@ -1,5 +1,3 @@
-'use strict';
-
 // ── 모델 설정 ─────────────────────────────────────────────────────────────────
 //
 // fal.ai SAM2 (Segment Anything Model 2) - text prompt 기반 세그멘테이션
@@ -7,11 +5,10 @@
 // 입력: { image_url, prompts: [{type: "text", text: "..."}] }
 // 출력: { image: { url: "..." } }  → SAM 마스크 이미지 (흰=마스크, 검=배경)
 //
+import fs from 'fs';
+
 const FAL_MODEL    = 'fal-ai/sam2/image';
 const FAL_ENDPOINT = `https://fal.run/${FAL_MODEL}`;
-// ─────────────────────────────────────────────────────────────────────────────
-
-const fs = require('fs');
 
 // 레이블 → SAM2 텍스트 프롬프트 / 출력 파일명 매핑
 const LABEL_MAP = {

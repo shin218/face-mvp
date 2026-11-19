@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * segment-hair.js
  *
@@ -16,9 +14,12 @@
  *   pip install -r python/requirements.txt
  */
 
-const { spawnSync } = require('child_process');
-const path          = require('path');
-const fs            = require('fs');
+import { spawnSync }    from 'child_process';
+import path             from 'path';
+import fs               from 'fs';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ── 설정 ─────────────────────────────────────────────────────────────────────
 

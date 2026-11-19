@@ -6,6 +6,7 @@ import com.example.demo.service.MultiModelVibeService;
 import com.example.demo.service.vibe.ModelAfterResult;
 import com.example.demo.service.vibe.ModelVibeResult;
 import com.example.demo.service.vibe.VibeInput;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +23,7 @@ import java.util.Base64;
 @Controller
 public class FaceController {
 
-	private static final long MAX_BYTES = 10L * 1024L * 1024L;
+	private static final long MAX_FILE_BYTES = 10L * 1024L * 1024L;
 	private static final Set<String> ALLOWED_EXT = Set.of("jpg", "jpeg", "png");
 	private static final Set<String> ALLOWED_CONTENT_TYPES = Set.of(
 			MediaType.IMAGE_JPEG_VALUE,
@@ -32,13 +33,18 @@ public class FaceController {
 	private final FacePlusService facePlusService;
 	private final MultiModelVibeService multiModelVibeService;
 	private final FalInstantIdService falInstantIdService;
+	private final boolean falEnabled;
 
-	public FaceController(FacePlusService facePlusService,
-	                      MultiModelVibeService multiModelVibeService,
-	                      FalInstantIdService falInstantIdService) {
+	public FaceController(
+			FacePlusService facePlusService,
+			MultiModelVibeService multiModelVibeService,
+			FalInstantIdService falInstantIdService,
+			@Value("${features.fal-enabled:false}") boolean falEnabled
+	) {
 		this.facePlusService = facePlusService;
 		this.multiModelVibeService = multiModelVibeService;
 		this.falInstantIdService = falInstantIdService;
+		this.falEnabled = falEnabled;
 	}
 
 	@GetMapping("/")
@@ -50,42 +56,70 @@ public class FaceController {
 			model.addAttribute("vibeResults", Collections.emptyList());
 		}
 		model.addAttribute("beforeImageDataUri", null);
+		model.addAttribute("ref1DataUri", null);
+		model.addAttribute("ref2DataUri", null);
 		model.addAttribute("afterResultMap", Collections.emptyMap());
 		return "upload";
 	}
 
 	@PostMapping(path = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	public String upload(@RequestParam("photo") MultipartFile photo, Model model) {
+	public String upload(
+			@RequestParam("photo") MultipartFile photo,
+			@RequestParam(value = "ref1", required = false) MultipartFile ref1,
+			@RequestParam(value = "ref2", required = false) MultipartFile ref2,
+			@RequestParam(value = "vibeText", required = false) String vibeText,
+			Model model
+	) {
 		try {
+			// 고객 사진 검증 (필수)
 			if (photo == null || photo.isEmpty()) {
-				throw new IllegalArgumentException("파일을 선택해주세요.");
+				throw new IllegalArgumentException("고객 사진을 선택해주세요.");
 			}
-			if (photo.getSize() > MAX_BYTES) {
-				throw new IllegalArgumentException("파일 크기는 10MB 이하만 허용됩니다.");
-			}
+			validateImageFile(photo, "고객 사진");
+			byte[] photoBytes = photo.getBytes();
+			String photoMime = toMime(photo.getContentType());
 
-			String originalFilename = photo.getOriginalFilename();
-			String ext = getExtension(originalFilename);
-			if (ext == null || !ALLOWED_EXT.contains(ext)) {
-				throw new IllegalArgumentException("업로드 가능한 파일은 jpg, jpeg, png 만 허용됩니다.");
-			}
-
-			String contentType = photo.getContentType();
-			if (contentType == null || !ALLOWED_CONTENT_TYPES.contains(contentType)) {
-				throw new IllegalArgumentException("업로드 가능한 파일은 jpg, jpeg, png 만 허용됩니다.");
+			// 레퍼런스 1 (선택)
+			byte[] ref1Bytes = null;
+			String ref1Mime = null;
+			if (ref1 != null && !ref1.isEmpty()) {
+				validateImageFile(ref1, "레퍼런스 1");
+				ref1Bytes = ref1.getBytes();
+				ref1Mime = toMime(ref1.getContentType());
 			}
 
-			byte[] bytes = photo.getBytes();
+			// 레퍼런스 2 (선택)
+			byte[] ref2Bytes = null;
+			String ref2Mime = null;
+			if (ref2 != null && !ref2.isEmpty()) {
+				validateImageFile(ref2, "레퍼런스 2");
+				ref2Bytes = ref2.getBytes();
+				ref2Mime = toMime(ref2.getContentType());
+			}
 
-			// before 이미지 data URI
-			String mimeType = contentType.contains("png") ? "image/png" : "image/jpeg";
+			// 썸네일 data URI
 			model.addAttribute("beforeImageDataUri",
-					"data:" + mimeType + ";base64," + Base64.getEncoder().encodeToString(bytes));
+					"data:" + photoMime + ";base64," + Base64.getEncoder().encodeToString(photoBytes));
+			model.addAttribute("ref1DataUri",
+					ref1Bytes != null ? "data:" + ref1Mime + ";base64," + Base64.getEncoder().encodeToString(ref1Bytes) : null);
+			model.addAttribute("ref2DataUri",
+					ref2Bytes != null ? "data:" + ref2Mime + ";base64," + Base64.getEncoder().encodeToString(ref2Bytes) : null);
+			model.addAttribute("vibeTextEcho", vibeText);
 
-			var assessment = facePlusService.assess(bytes, originalFilename);
+			// Face++ 분석
+			var assessment = facePlusService.assess(photoBytes, photo.getOriginalFilename());
 			model.addAttribute("assessment", assessment);
 
+			// VibeInput 구성
 			var input = new VibeInput();
+			input.customerImageBytes = photoBytes;
+			input.customerImageMime = photoMime;
+			input.ref1Bytes = ref1Bytes;
+			input.ref1Mime = ref1Mime;
+			input.ref2Bytes = ref2Bytes;
+			input.ref2Mime = ref2Mime;
+			input.vibeText = vibeText;
+
 			input.detectPrettyJson = assessment.prettyJson;
 			input.gender = assessment.gender == null ? null : assessment.gender.value;
 			input.age = assessment.age == null ? null : (int) Math.round(assessment.age.value);
@@ -108,8 +142,10 @@ public class FaceController {
 			List<ModelVibeResult> vibeResults = multiModelVibeService.analyzeParallel(input);
 			model.addAttribute("vibeResults", vibeResults);
 
-			// 모델별 after 이미지 병렬 생성
-			Map<String, ModelAfterResult> afterResultMap = generateAfterImages(vibeResults, bytes, contentType);
+			// After 이미지 (fal 비활성화 시 스킵)
+			Map<String, ModelAfterResult> afterResultMap = falEnabled
+					? generateAfterImages(vibeResults, photoBytes, photo.getContentType())
+					: Collections.emptyMap();
 			model.addAttribute("afterResultMap", afterResultMap);
 
 			return "upload";
@@ -118,9 +154,30 @@ public class FaceController {
 			model.addAttribute("assessment", null);
 			model.addAttribute("vibeResults", Collections.emptyList());
 			model.addAttribute("beforeImageDataUri", null);
+			model.addAttribute("ref1DataUri", null);
+			model.addAttribute("ref2DataUri", null);
 			model.addAttribute("afterResultMap", Collections.emptyMap());
 			return "upload";
 		}
+	}
+
+	private void validateImageFile(MultipartFile file, String label) {
+		if (file.getSize() > MAX_FILE_BYTES) {
+			throw new IllegalArgumentException(label + " 파일 크기는 10MB 이하만 허용됩니다.");
+		}
+		String ext = getExtension(file.getOriginalFilename());
+		if (ext == null || !ALLOWED_EXT.contains(ext)) {
+			throw new IllegalArgumentException(label + ": 허용 확장자는 jpg/jpeg/png입니다.");
+		}
+		String ct = file.getContentType();
+		if (ct == null || !ALLOWED_CONTENT_TYPES.contains(ct)) {
+			throw new IllegalArgumentException(label + ": 허용 확장자는 jpg/jpeg/png입니다.");
+		}
+	}
+
+	private static String toMime(String contentType) {
+		if (contentType == null) return "image/jpeg";
+		return contentType.contains("png") ? "image/png" : "image/jpeg";
 	}
 
 	private Map<String, ModelAfterResult> generateAfterImages(
@@ -135,7 +192,6 @@ public class FaceController {
 			));
 		}
 
-		// 3개 모델 병렬 생성
 		List<CompletableFuture<ModelAfterResult>> futures = vibeResults.stream()
 				.map(r -> CompletableFuture.supplyAsync(() ->
 						falInstantIdService.generateForModel(

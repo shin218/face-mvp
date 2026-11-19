@@ -3,324 +3,433 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Face++ · 멀티 LLM Vibe 비교</title>
+  <title>Quiet Glow Up · 스타일 분석</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
-    .card { max-width: 1200px; margin: 0 auto; padding: 16px; border: 1px solid #e5e7eb; border-radius: 12px; }
-    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-    .error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; padding: 10px 12px; border-radius: 10px; margin-top: 12px; }
-    .ok { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; padding: 10px 12px; border-radius: 10px; margin-top: 12px; }
-    pre { white-space: pre-wrap; word-break: break-word; background: #0b1220; color: #e5e7eb; padding: 12px; border-radius: 12px; overflow: auto; }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-    .kv { margin-top: 12px; padding: 12px; border: 1px solid #e5e7eb; border-radius: 12px; }
-    .kv b { display: inline-block; min-width: 140px; }
-    input[type="file"] { padding: 8px; border: 1px solid #e5e7eb; border-radius: 10px; }
-    button { padding: 10px 14px; border: 0; border-radius: 10px; background: #111827; color: white; cursor: pointer; }
-    button:hover { background: #0b1220; }
-    small { color: #6b7280; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #f9fafb; color: #111827; }
+    .page { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+    h1 { font-size: 1.4rem; font-weight: 700; margin: 0 0 4px 0; }
+    .subtitle { color: #6b7280; font-size: 0.88rem; margin-bottom: 28px; }
 
-    /* Before 단독 표시 */
-    .before-section {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    .before-section .ba-label {
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: #374151;
-    }
-    .before-section img {
-      max-width: 320px;
-      border-radius: 10px;
+    /* ── 업로드 폼 ── */
+    .form-card {
+      background: #fff;
       border: 1px solid #e5e7eb;
-      object-fit: cover;
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
     }
-
-    /* Vibe 그리드 */
-    .vibe-compare { margin-top: 24px; }
-    .vibe-compare > h3 { margin-bottom: 12px; font-size: 1.1rem; }
-    .vibe-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      align-items: stretch;
-    }
-    @media (max-width: 960px) {
-      .vibe-grid { grid-template-columns: 1fr; }
-    }
-    .vibe-col {
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 12px;
-      background: #fafafa;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-    }
-    .vibe-col header { margin-bottom: 8px; }
-    .vibe-col h4 { margin: 0 0 4px 0; font-size: 0.95rem; }
-    pre.vibe-out { margin: 0; min-height: 4em; font-size: 0.82rem; line-height: 1.45; }
-    pre.vibe-err { margin: 0; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
-    .vibe-english-result { margin-top: 4px; }
-    .vibe-english-result pre.vibe-out { background: #0b1220; color: #e5e7eb; }
-    .korean-result {
-      margin-top: 10px;
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid #7dd3fc;
-      background: #e0f2fe;
-    }
-    .korean-result pre.vibe-out-korean {
-      background: transparent;
-      color: #0c4a6e;
-      border: 0;
-      padding: 0;
-      min-height: 0;
-    }
-
-    /* After 이미지 (모델별) */
-    .after-section {
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .after-section .after-label {
-      font-weight: 700;
-      font-size: 0.82rem;
-      color: #6d28d9;
-    }
-    .after-section img {
-      width: 100%;
+    .form-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 180px; }
+    .form-group label { font-size: 0.82rem; font-weight: 600; color: #374151; }
+    .form-group small { font-size: 0.75rem; color: #9ca3af; }
+    input[type="file"] {
+      padding: 7px 10px;
+      border: 1px solid #d1d5db;
       border-radius: 8px;
-      border: 1px solid #ddd6fe;
-      object-fit: cover;
+      font-size: 0.83rem;
+      background: #f9fafb;
     }
-    .after-prompt {
-      font-size: 0.72rem;
-      color: #6b7280;
-      background: #f5f3ff;
-      border-radius: 6px;
-      padding: 6px 8px;
-      line-height: 1.5;
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      resize: vertical;
+      min-height: 76px;
+      font-family: inherit;
+      background: #f9fafb;
     }
-    .after-error {
-      font-size: 0.78rem;
-      color: #991b1b;
+    .btn-submit {
+      padding: 11px 22px;
+      background: #111827;
+      color: #fff;
+      border: 0;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-submit:hover { background: #1f2937; }
+
+    /* ── 에러 ── */
+    .error-box {
       background: #fef2f2;
+      color: #991b1b;
       border: 1px solid #fecaca;
-      border-radius: 6px;
-      padding: 6px 8px;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
     }
+
+    /* ── 썸네일 스트립 ── */
+    .thumb-strip { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+    .thumb-item { display: flex; flex-direction: column; gap: 5px; }
+    .thumb-item span { font-size: 0.75rem; color: #6b7280; font-weight: 600; }
+    .thumb-item img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* ── Face++ 접이식 ── */
+    details {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      background: #fff;
+    }
+    details summary {
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #374151;
+      user-select: none;
+    }
+    details > div { padding: 0 14px 14px; }
+    .kv { font-size: 0.8rem; line-height: 1.8; }
+    .kv b { display: inline-block; min-width: 130px; color: #6b7280; }
+    pre.json-out {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #0b1220;
+      color: #e5e7eb;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      overflow: auto;
+      max-height: 300px;
+      margin-top: 10px;
+    }
+
+    /* ── Claude 분석 결과 (markdown) ── */
+    .claude-section {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+    }
+    .claude-section > .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .claude-section > .section-header h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .claude-error {
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+    }
+    /* marked.js 출력 스타일 */
+    .md-body { font-size: 0.9rem; line-height: 1.75; color: #1f2937; }
+    .md-body h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 24px 0 8px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #f3f4f6;
+      color: #111827;
+    }
+    .md-body h4 { font-size: 0.93rem; font-weight: 700; margin: 16px 0 6px; color: #374151; }
+    .md-body ul { padding-left: 20px; margin: 6px 0; }
+    .md-body li { margin-bottom: 3px; }
+    .md-body p { margin: 6px 0; }
+    .md-body code {
+      background: #f3f4f6;
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.85em;
+    }
+    .md-body pre {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px;
+      overflow: auto;
+    }
+    .md-body pre code { background: none; padding: 0; }
+    .md-body strong { font-weight: 700; }
+
+    /* 섹션 5 복사 버튼 */
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      background: #f3f4f6;
+      border: 1px solid #d1d5db;
+      border-radius: 7px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #374151;
+      transition: background 0.15s;
+    }
+    .copy-btn:hover { background: #e5e7eb; }
+    .copy-btn.copied { background: #d1fae5; border-color: #6ee7b7; color: #065f46; }
+    .section5-block {
+      border: 1px solid #e0f2fe;
+      border-radius: 10px;
+      background: #f0f9ff;
+      padding: 14px 16px;
+      margin: 10px 0;
+      position: relative;
+    }
+    .section5-block .s5-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #0369a1;
+      margin-bottom: 8px;
+    }
+    .section5-block pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.8rem;
+      color: #1e40af;
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    .section5-block .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    /* GPT/Gemini 비활성 안내 (작게) */
+    .disabled-models { font-size: 0.75rem; color: #9ca3af; margin-top: 8px; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Face++ Detect · Claude / GPT-4o / Gemini 비교</h2>
-    <form method="post" th:action="@{/upload}" enctype="multipart/form-data">
-      <div class="row">
-        <input type="file" name="photo" accept="image/jpeg,image/png,.jpg,.jpeg,.png" required />
-        <button type="submit">업로드 &amp; Detect</button>
-      </div>
-      <div style="margin-top:8px;">
-        <small>허용 확장자: jpg/jpeg/png, 최대 10MB</small>
-      </div>
-    </form>
+  <div class="page">
+    <h1>Quiet Glow Up · 스타일 분석</h1>
+    <p class="subtitle">고객 사진 + 레퍼런스 + 텍스트를 업로드하면 Claude가 분석 결과를 작성합니다.</p>
 
-    <div class="error" th:if="${error}">
+    <!-- 업로드 폼 -->
+    <div class="form-card">
+      <form method="post" th:action="@{/upload}" enctype="multipart/form-data">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="photo">고객 사진 <span style="color:#ef4444">*</span></label>
+            <input type="file" id="photo" name="photo" accept="image/jpeg,image/png,.jpg,.jpeg,.png" required />
+            <small>jpg/jpeg/png, 최대 10MB</small>
+          </div>
+          <div class="form-group">
+            <label for="ref1">레퍼런스 1 <span style="color:#9ca3af">(선택)</span></label>
+            <input type="file" id="ref1" name="ref1" accept="image/jpeg,image/png,.jpg,.jpeg,.png" />
+            <small>원하는 룩 이미지</small>
+          </div>
+          <div class="form-group">
+            <label for="ref2">레퍼런스 2 <span style="color:#9ca3af">(선택)</span></label>
+            <input type="file" id="ref2" name="ref2" accept="image/jpeg,image/png,.jpg,.jpeg,.png" />
+            <small>원하는 룩 이미지</small>
+          </div>
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label for="vibeText" style="display:block; font-size:0.82rem; font-weight:600; color:#374151; margin-bottom:5px;">
+            원하는 룩/바이브 설명 <span style="color:#9ca3af">(선택)</span>
+          </label>
+          <textarea id="vibeText" name="vibeText"
+            placeholder="예) 미니멀하고 차분한 느낌, 쿨톤 베이스, 내추럴 메이크업 선호..."
+            th:text="${vibeTextEcho}"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">분석 시작</button>
+      </form>
+    </div>
+
+    <!-- 에러 -->
+    <div class="error-box" th:if="${error}">
       <b th:text="${error}"></b>
     </div>
 
-    <!-- Before 이미지 (상단 단독) -->
-    <div class="before-section" th:if="${beforeImageDataUri != null}">
-      <span class="ba-label">Before</span>
-      <img th:src="${beforeImageDataUri}" alt="Before" />
-    </div>
-
-    <div class="kv" th:if="${assessment}">
-      <div><b>판정 결과</b> <code th:text="${assessment.verdict}"></code></div>
-      <div><b>사유 메시지</b> <span th:text="${assessment.reason}"></span></div>
-    </div>
-
-    <div class="ok" th:if="${assessment}">
-      <div class="kv">
-        <div><b>faces 개수</b> <span th:text="${assessment.facesCount}"></span></div>
-        <div><b>첫 번째 face_token</b> <code th:text="${assessment.firstFaceToken}"></code></div>
+    <!-- 썸네일 스트립 -->
+    <div class="thumb-strip" th:if="${beforeImageDataUri != null}">
+      <div class="thumb-item">
+        <span>고객 사진</span>
+        <img th:src="${beforeImageDataUri}" alt="고객 사진" />
       </div>
-      <div class="kv">
-        <div><b>headpose</b>
-          <span th:if="${assessment.headpose == null}"></span>
-          <code th:if="${assessment.headpose != null}">
-            yaw=<span th:text="${assessment.headpose.yawAngle}"></span>,
-            pitch=<span th:text="${assessment.headpose.pitchAngle}"></span>,
-            roll=<span th:text="${assessment.headpose.rollAngle}"></span>
-          </code>
+      <div class="thumb-item" th:if="${ref1DataUri != null}">
+        <span>레퍼런스 1</span>
+        <img th:src="${ref1DataUri}" alt="레퍼런스 1" />
+      </div>
+      <div class="thumb-item" th:if="${ref2DataUri != null}">
+        <span>레퍼런스 2</span>
+        <img th:src="${ref2DataUri}" alt="레퍼런스 2" />
+      </div>
+    </div>
+
+    <!-- Claude 분석 결과 -->
+    <th:block th:if="${vibeResults != null and !vibeResults.isEmpty()}">
+      <th:block th:each="r : ${vibeResults}" th:if="${r.provider == 'Claude (Sonnet)'}">
+        <div class="claude-section">
+          <div class="section-header">
+            <h2>Claude 분석 결과</h2>
+          </div>
+          <div class="claude-error" th:if="${r.error != null}" th:text="${r.error}"></div>
+          <th:block th:if="${r.error == null}">
+            <!-- marked.js로 렌더링할 raw 텍스트 (숨김) -->
+            <script th:id="'claude-raw'" type="text/plain" th:text="${r.text}"></script>
+            <div id="claude-md" class="md-body"></div>
+            <!-- 섹션 5 복사 블록 (JS로 주입) -->
+            <div id="section5-container"></div>
+          </th:block>
         </div>
-        <div><b>blur</b>
-          <span th:if="${assessment.blur == null}"></span>
-          <code th:if="${assessment.blur != null}">
-            blurness(value=<span th:text="${assessment.blur.blurnessValue}"></span>, threshold=<span th:text="${assessment.blur.blurnessThreshold}"></span>),
-            motionblur(value=<span th:text="${assessment.blur.motionblurValue}"></span>, threshold=<span th:text="${assessment.blur.motionblurThreshold}"></span>),
-            gaussianblur(value=<span th:text="${assessment.blur.gaussianblurValue}"></span>, threshold=<span th:text="${assessment.blur.gaussianblurThreshold}"></span>)
-          </code>
-        </div>
-        <div><b>eyestatus</b>
-          <span th:if="${assessment.eyestatus == null}"></span>
-          <code th:if="${assessment.eyestatus != null}">
-            left_eye_open=<span th:text="${assessment.eyestatus.leftEyeOpen}"></span>,
-            right_eye_open=<span th:text="${assessment.eyestatus.rightEyeOpen}"></span>
-          </code>
-        </div>
-        <div><b>gender</b>
-          <span th:if="${assessment.gender == null}"></span>
-          <code th:if="${assessment.gender != null}">
-            value=<span th:text="${assessment.gender.value}"></span>,
-            confidence=<span th:text="${assessment.gender.confidence}"></span>
-          </code>
-        </div>
-        <div><b>age</b>
-          <span th:if="${assessment.age == null}"></span>
-          <code th:if="${assessment.age != null}">
-            value=<span th:text="${assessment.age.value}"></span>
-          </code>
-        </div>
-        <div><b>emotion</b>
-          <span th:if="${#strings.isEmpty(assessment.emotion)}"></span>
-          <code th:if="${!#strings.isEmpty(assessment.emotion)}" th:text="${assessment.emotion}"></code>
-        </div>
-        <div><b>beauty</b>
-          <span th:if="${assessment.beauty == null}"></span>
-          <code th:if="${assessment.beauty != null}">
-            male_score=<span th:text="${assessment.beauty.maleScore}"></span>,
-            female_score=<span th:text="${assessment.beauty.femaleScore}"></span>
-          </code>
-        </div>
-        <div><b>skinstatus</b>
-          <span th:if="${assessment.skinstatus == null}"></span>
-          <code th:if="${assessment.skinstatus != null}">
+      </th:block>
+
+      <!-- GPT/Gemini 비활성 안내 -->
+      <div class="disabled-models">
+        <th:block th:each="r : ${vibeResults}" th:if="${r.provider != 'Claude (Sonnet)' and r.error != null}">
+          <span th:text="${r.provider + ': ' + r.error}"></span>&nbsp;
+        </th:block>
+      </div>
+    </th:block>
+
+    <!-- Face++ 세부 (접이식) -->
+    <details th:if="${assessment != null}">
+      <summary>Face++ 측정 데이터 (펼치기)</summary>
+      <div>
+        <div class="kv">
+          <div><b>판정</b> <code th:text="${assessment.verdict}"></code>
+            <span th:if="${assessment.reason != null}"> — <span th:text="${assessment.reason}"></span></span>
+          </div>
+          <div><b>faces 개수</b> <span th:text="${assessment.facesCount}"></span></div>
+          <div th:if="${assessment.gender != null}"><b>gender</b> <span th:text="${assessment.gender.value}"></span>
+            (confidence=<span th:text="${assessment.gender.confidence}"></span>)</div>
+          <div th:if="${assessment.age != null}"><b>age</b> <span th:text="${assessment.age.value}"></span></div>
+          <div th:if="${!#strings.isEmpty(assessment.emotion)}"><b>emotion</b> <span th:text="${assessment.emotion}"></span></div>
+          <div th:if="${assessment.skinstatus != null}"><b>skinstatus</b>
             health=<span th:text="${assessment.skinstatus.health}"></span>,
             stain=<span th:text="${assessment.skinstatus.stain}"></span>,
             acne=<span th:text="${assessment.skinstatus.acne}"></span>,
             dark_circle=<span th:text="${assessment.skinstatus.darkCircle}"></span>
-          </code>
-        </div>
-        <div><b>facequality</b>
-          <span th:if="${assessment.facequality == null}"></span>
-          <code th:if="${assessment.facequality != null}">
-            value=<span th:text="${assessment.facequality.value}"></span>,
-            threshold=<span th:text="${assessment.facequality.threshold}"></span>
-          </code>
-        </div>
-        <div><b>structure</b>
-          <span th:if="${assessment.structure == null}"></span>
-          <code th:if="${assessment.structure != null}">
-            eye_distance_px=<span th:text="${assessment.structure.eyeDistance}"></span>,
-            face_w_h_ratio=<span th:text="${assessment.structure.faceWidthHeightRatio}"></span>,
-            left_eye_width_px=<span th:text="${assessment.structure.leftEyeWidthPx}"></span>,
-            right_eye_width_px=<span th:text="${assessment.structure.rightEyeWidthPx}"></span>,
-            nose_chin_to_forehead_nose_ratio=<span th:text="${assessment.structure.noseChinToForeheadNoseRatio}"></span>,
-            lip_thickness_px=<span th:text="${assessment.structure.lipThicknessPx}"></span>,
+          </div>
+          <div th:if="${assessment.structure != null}"><b>structure</b>
+            eye_distance=<span th:text="${assessment.structure.eyeDistance}"></span>,
+            face_w_h=<span th:text="${assessment.structure.faceWidthHeightRatio}"></span>,
             face_shape=<span th:text="${assessment.structure.faceShape}"></span>,
-            bangs_likely=<span th:text="${assessment.structure.bangsLikely}"></span>
-          </code>
+            bangs=<span th:text="${assessment.structure.bangsLikely}"></span>
+          </div>
         </div>
+        <pre class="json-out" th:text="${assessment.prettyJson}"></pre>
       </div>
-    </div>
-
-    <h3 style="margin-top:16px;">응답 JSON (Pretty)</h3>
-    <pre th:text="${assessment != null ? assessment.prettyJson : ''}"></pre>
-
-    <section class="vibe-compare" th:if="${vibeResults != null and !vibeResults.isEmpty()}">
-      <h3>멀티 모델 Vibe 분석 + After 이미지</h3>
-      <div class="vibe-grid">
-        <article class="vibe-col" th:each="r : ${vibeResults}">
-          <header>
-            <h4 th:text="${r.provider}">모델</h4>
-          </header>
-
-          <!-- Vibe 결과 -->
-          <pre class="vibe-out vibe-err" th:if="${r.error != null}" th:text="${r.error}"></pre>
-          <th:block th:if="${r.error == null}">
-            <pre class="vibe-raw-source" style="display:none;" th:text="${r.text}"></pre>
-            <div class="vibe-english-result">
-              <pre class="vibe-out"></pre>
-            </div>
-            <div class="korean-result" style="display:none;">
-              <pre class="vibe-out vibe-out-korean"></pre>
-            </div>
-          </th:block>
-
-          <!-- After 이미지 (모델별) -->
-          <th:block th:with="afterResult=${afterResultMap != null ? afterResultMap[r.provider] : null}">
-            <div class="after-section" th:if="${afterResult != null}">
-              <span class="after-label">After (AI Generated)</span>
-              <img th:if="${afterResult.imageUrl != null}"
-                   th:src="${afterResult.imageUrl}"
-                   alt="After"
-                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-              <div style="display:none;" class="after-error"
-                   th:if="${afterResult.imageUrl != null}">
-                이미지 로드 실패 — URL 직접 확인:
-                <a th:href="${afterResult.imageUrl}" th:text="${afterResult.imageUrl}" target="_blank"></a>
-              </div>
-              <div class="after-error" th:if="${afterResult.imageUrl == null and afterResult.error != null}"
-                   th:text="${afterResult.error}"></div>
-              <div class="after-prompt" th:if="${afterResult.prompt != null}">
-                <b>Prompt:</b> <span th:text="${afterResult.prompt}"></span>
-              </div>
-            </div>
-          </th:block>
-        </article>
-      </div>
-
-      <script>
-        (function () {
-          function stripKoreanMarkers(s) {
-            if (!s) return '';
-            return s
-              .replace(/\[KOREAN_START\]/g, '')
-              .replace(/\[KOREAN_END\]/g, '')
-              .trim();
-          }
-          function splitKorean(full) {
-            if (!full) return { en: '', ko: '' };
-            var re = /\[KOREAN_START\]([\s\S]*?)\[KOREAN_END\]/;
-            var m = full.match(re);
-            if (!m) {
-              return { en: stripKoreanMarkers(full.trim()), ko: '' };
-            }
-            return {
-              en: stripKoreanMarkers(full.slice(0, m.index).trim()),
-              ko: stripKoreanMarkers((m[1] || '').trim())
-            };
-          }
-          document.querySelectorAll('article.vibe-col').forEach(function (col) {
-            var raw = col.querySelector('pre.vibe-raw-source');
-            if (!raw) return;
-            var provider = (col.querySelector('h4') && col.querySelector('h4').textContent) || '';
-            var parts = splitKorean(raw.textContent);
-            var preEn = col.querySelector('.vibe-english-result pre.vibe-out');
-            var koWrap = col.querySelector('.korean-result');
-            var preKo = koWrap ? koWrap.querySelector('pre.vibe-out-korean') : null;
-            if (preEn) preEn.textContent = parts.en;
-            if (parts.ko && koWrap && preKo) {
-              preKo.textContent = parts.ko;
-              koWrap.style.display = 'block';
-            }
-          });
-        })();
-      </script>
-    </section>
-
-    <div th:if="${assessment != null and !#strings.isEmpty(assessment.rawJson)}">
-      <h3 style="margin-top:16px;">응답 JSON (Raw)</h3>
-      <pre th:text="${assessment.rawJson}"></pre>
-    </div>
+    </details>
   </div>
+
+  <script>
+    (function () {
+      var rawEl = document.getElementById('claude-raw');
+      if (!rawEl) return;
+
+      var raw = rawEl.textContent || '';
+      if (!raw.trim()) return;
+
+      // marked.js 렌더링
+      var mdEl = document.getElementById('claude-md');
+      if (mdEl && typeof marked !== 'undefined') {
+        mdEl.innerHTML = marked.parse(raw);
+      }
+
+      // 섹션 5 추출 및 복사 버튼 주입
+      extractSection5(raw);
+
+      function extractSection5(text) {
+        // "## 5." 또는 "### 5." 헤딩에서 "## 6." / "### 6." 직전까지 추출
+        var sec5Match = text.match(/#{2,3}\s*5[\.\s][^\n]*\n([\s\S]*?)(?=#{2,3}\s*6[\.\s]|$)/);
+        if (!sec5Match) return;
+
+        var sec5Body = sec5Match[1].trim();
+        // A안 / B안 블록 분리 (### A안 프롬프트 or A안 형태 모두 처리)
+        var blocks = [];
+        var aMatch = sec5Body.match(/(?:^|\n)((?:#{1,4}\s*)?A안[\s\S]*?)(?=(?:#{1,4}\s*)?B안|$)/);
+        var bMatch = sec5Body.match(/(?:^|\n)((?:#{1,4}\s*)?B안[\s\S]*?)$/);
+
+        if (aMatch) blocks.push({ label: '섹션 5 A안 복사', text: aMatch[1].trim() });
+        if (bMatch) blocks.push({ label: '섹션 5 B안 복사', text: bMatch[1].trim() });
+
+        // A/B 분리 실패 시 전체를 하나로
+        if (blocks.length === 0) {
+          blocks.push({ label: '섹션 5 전체 복사', text: sec5Body });
+        }
+
+        var container = document.getElementById('section5-container');
+        if (!container) return;
+
+        var wrapper = document.createElement('div');
+        wrapper.style.marginTop = '20px';
+        var title = document.createElement('div');
+        title.style.cssText = 'font-size:0.82rem;font-weight:700;color:#0369a1;margin-bottom:8px;';
+        title.textContent = '📋 섹션 5 ChatGPT 프롬프트';
+        wrapper.appendChild(title);
+
+        blocks.forEach(function (b) {
+          var block = document.createElement('div');
+          block.className = 'section5-block';
+
+          var label = document.createElement('div');
+          label.className = 's5-label';
+          label.textContent = b.label.replace('섹션 5 ', '').replace(' 복사', '');
+          block.appendChild(label);
+
+          var pre = document.createElement('pre');
+          pre.textContent = b.text;
+          block.appendChild(pre);
+
+          var btn = document.createElement('button');
+          btn.className = 'copy-btn';
+          btn.textContent = '복사';
+          btn.addEventListener('click', function () {
+            navigator.clipboard.writeText(b.text).then(function () {
+              btn.textContent = '✓ 복사됨';
+              btn.classList.add('copied');
+              setTimeout(function () {
+                btn.textContent = '복사';
+                btn.classList.remove('copied');
+              }, 2000);
+            }).catch(function () {
+              // fallback
+              var ta = document.createElement('textarea');
+              ta.value = b.text;
+              ta.style.cssText = 'position:fixed;opacity:0;';
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand('copy');
+              document.body.removeChild(ta);
+              btn.textContent = '✓ 복사됨';
+              btn.classList.add('copied');
+              setTimeout(function () {
+                btn.textContent = '복사';
+                btn.classList.remove('copied');
+              }, 2000);
+            });
+          });
+          block.appendChild(btn);
+          wrapper.appendChild(block);
+        });
+
+        container.appendChild(wrapper);
+      }
+    })();
+  </script>
 </body>
 </html>

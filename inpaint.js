@@ -1,6 +1,4 @@
-'use strict';
-
-const fs = require('fs');
+import fs from 'fs';
 
 // ── 설정 ─────────────────────────────────────────────────────────────────────
 const FAL_MODEL    = 'fal-ai/flux-pro/v1/fill';

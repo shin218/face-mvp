@@ -1,5 +1,3 @@
-'use strict';
-
 const HAIR_PREFIX    = 'same person, preserve identity, realistic, natural lighting, do not change face, ';
 const MAKEUP_PREFIX  = 'same person, preserve identity, subtle makeup, realistic skin texture, natural lighting, ';
 const CLOTHES_PREFIX = 'same person, preserve identity, same pose, realistic fabric, natural lighting, ';
@@ -32,4 +30,4 @@ function buildClothesPrompt(analysis) {
   return CLOTHES_PREFIX + parts;
 }
 
-module.exports = { buildHairPrompt, buildMakeupPrompt, buildClothesPrompt };
+export { buildHairPrompt, buildMakeupPrompt, buildClothesPrompt };

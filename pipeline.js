@@ -1,23 +1,13 @@
-'use strict';
+import 'dotenv/config';
+import fs   from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// ── .env 로드 ─────────────────────────────────────────────────────────────────
-const fs   = require('fs');
-const path = require('path');
+import { detectCase, buildVibeSystemPrompt, analyzeWithGPT, analyzeWithGemini, analyzeWithClaude } from './llm-analyze.js';
+import { buildHairPrompt, buildMakeupPrompt, buildClothesPrompt } from './prompt-builder.js';
 
-(function loadEnv() {
-  try {
-    const lines = fs.readFileSync(path.join(__dirname, '.env'), 'utf8').split(/\r?\n/);
-    for (const line of lines) {
-      const t = line.trim();
-      if (!t || t.startsWith('#')) continue;
-      const m = t.match(/^([A-Z0-9_]+)\s*=\s*(.+)$/);
-      if (m && !process.env[m[1]]) process.env[m[1]] = m[2].trim();
-    }
-  } catch (_) {}
-})();
-
-const { analyzeWithGPT, analyzeWithGemini, analyzeWithClaude } = require('./llm-analyze');
-const { buildHairPrompt, buildMakeupPrompt, buildClothesPrompt } = require('./prompt-builder');
+// ESM에서는 __dirname이 없으므로 직접 생성
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ── 설정 ─────────────────────────────────────────────────────────────────────
 
@@ -226,7 +216,6 @@ async function main() {
 
   let celebrityMatches = [];
   try {
-    // ESM 모듈을 CJS에서 동적 import
     const { findSimilarCelebrity } = await import('./find-similar-celebrity.js');
     const { matches } = await findSimilarCelebrity(BEFORE_PATH);
     celebrityMatches = matches;
@@ -236,38 +225,52 @@ async function main() {
         console.log(`  → ${m.name} (${m.name_en})  confidence: ${m.confidence}%`);
       }
     } else {
-      console.log('  → 매칭 연예인 없음 (confidence 60% 미만) — 기본 분석으로 진행');
+      console.log('  → 매칭 연예인 없음 (confidence 60% 미만) — Case C로 진행');
     }
   } catch (e) {
     console.warn(`  ⚠ 연예인 검색 실패 (건너뜀): ${e.message}`);
   }
 
   // ───────────────────────────────────────────────────────────────────────────
-  // STEP 2: LLM 분석 (GPT / Gemini / Claude 병렬)
+  // STEP 2: 바이브 분석 (GPT / Gemini / Claude 병렬)
+  //
+  // Case A (70%↑) : 연예인 유사도 높음 → 개별 분석 + 공통점 + best look
+  // Case B (60~70%): 분위기 유사 참고   → "비슷한 분위기" 프레이밍
+  // Case C (매칭없음): 얼굴 데이터만   → 직접 best look 추천
   // ───────────────────────────────────────────────────────────────────────────
-  console.log('\n[STEP 2] LLM 분석 (3개 모델 병렬)');
+  const vibeCase     = detectCase(celebrityMatches);
+  const systemPrompt = buildVibeSystemPrompt(vibeCase, celebrityMatches);
+  const caseLabel    = vibeCase === 'A' ? 'A (70% 이상)' : vibeCase === 'B' ? 'B (60~70%)' : 'C (매칭 없음)';
+
+  console.log(`\n[STEP 2] 바이브 분석 — Case ${caseLabel} / 3개 모델 병렬`);
 
   const [gptRes, geminiRes, claudeRes] = await Promise.allSettled([
-    analyzeWithGPT(beforeBytes, BEFORE_PATH),
-    analyzeWithGemini(beforeBytes, BEFORE_PATH),
-    analyzeWithClaude(beforeBytes, BEFORE_PATH, celebrityMatches), // ← celebrity context 주입
+    analyzeWithGPT(beforeBytes, BEFORE_PATH, systemPrompt),
+    analyzeWithGemini(beforeBytes, BEFORE_PATH, systemPrompt),
+    analyzeWithClaude(beforeBytes, BEFORE_PATH, systemPrompt),
   ]);
 
-  const analyses = {};
+  const analyses  = {};
   const resultMap = { gpt: gptRes, gemini: geminiRes, claude: claudeRes };
+  const border    = '═'.repeat(60);
 
   for (const model of MODELS) {
     const r = resultMap[model];
     if (r.status === 'fulfilled') {
       analyses[model] = r.value;
+
+      // analysis.json 저장
       const outPath = path.join(outputRoot, model, 'analysis.json');
       fs.writeFileSync(outPath, JSON.stringify(r.value, null, 2), 'utf8');
-      log(model.toUpperCase(), `분석 완료 → analysis.json 저장`);
-      log(model.toUpperCase(), `  vibe    : ${(r.value.vibe_keywords || []).join(', ')}`);
-      log(model.toUpperCase(), `  hair    : ${(r.value.hair_keywords || []).join(', ')}`);
-      log(model.toUpperCase(), `  makeup  : ${(r.value.makeup_keywords || []).join(', ')}`);
-      log(model.toUpperCase(), `  clothes : ${(r.value.clothes_keywords || []).join(', ')}`);
-      log(model.toUpperCase(), `  summary : ${r.value.summary}`);
+
+      // 한글 리포트 콘솔 출력
+      console.log(`\n${border}`);
+      console.log(`  [${model.toUpperCase()}] 바이브 분석 결과`);
+      console.log(border);
+      console.log(r.value.display || '(display 없음)');
+      console.log(border);
+
+      log(model.toUpperCase(), 'analysis.json 저장 완료');
     } else {
       log(model.toUpperCase(), `분석 실패: ${r.reason?.message || String(r.reason)}`);
     }
@@ -291,10 +294,10 @@ async function main() {
     const outputDir = path.join(outputRoot, model);
     try {
       await runModelPipeline({
-        modelName: model,
+        modelName:  model,
         beforePath: BEFORE_PATH,
         masks,
-        analysis: analyses[model],
+        analysis:   analyses[model],
         outputDir,
       });
     } catch (e) {
