@@ -32,8 +32,8 @@ openai:
 gemini:
   api:
     key: ${GEMINI_API_KEY:}
-    model: gemini-2.5-pro
-    fallbackModel: gemini-2.5-flash
+    model: gemini-4-argon
+    fallbackModel: gemini-3.8-flash
 
 fal:
   api:
