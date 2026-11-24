@@ -5,7 +5,6 @@ out/
 *.iml
 .env
 node_modules/
-application.yml
 python/*.pth
 gradle-dist/
 data/images/

@@ -1,0 +1,11 @@
+node_modules/
+output/
+test/
+data/images/
+python/
+.env
+.git/
+build/
+bin/
+.gradle/
+*.png
